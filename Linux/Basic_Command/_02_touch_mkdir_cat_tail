@@ -1,0 +1,18 @@
+touch [namafile]	: membuat file baru
+mkdir [namafolder]	: membuat folder baru
+cat	[namafile]		: membaca sebuah file
+tail [namafile]		: membaca sebauh file (hampir mirip dengan cat)
+tail -f [namafile]	: menampilkan secara realtime 
+
+
+
+
+catatan: sebuah file biasanya memiliki atribut sebagai berikut
+drwxrwxr-x 2 kyi kyi 4096 Peb 21 20:38 asd
+-rw-rw-r-- 1 kyi kyi    0 Peb 21 20:38 qwe
+lrwxrwxrwx 1 kyi kyi    3 Peb 21 20:42 asdl -> asd
+
+
+d 		: directory, artinya dia adalah sebuah folder
+l		: link, dia adalah sebuah link(shortcut)
+-r		: normal file

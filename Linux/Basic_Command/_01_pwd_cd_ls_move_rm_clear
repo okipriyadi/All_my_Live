@@ -1,0 +1,14 @@
+pwd		: PrintWorkingDirectory, memprint alamat saat ini  $pwd
+cd		: cd 	= currentDirectory, untuk berpindah lokasi
+cd ..	: .. 	= parent, berpindah satu folder ke atas
+cd ~	: ~ 	= home, berpindah ke home
+cd /	: /		= root, berpindah ke root
+ls		: ls 	= list, untuk menampilkan seluruh isi folder
+ls -l	: -l 	= long, untuk menampilkan seluruh isi folder beserta detailnya
+ls -a	: -a	= all, menampilkan semua file termasuk yang di hidden 
+ls -al	: gabungan dari ls -a dengan ls -l
+move [filelama] [filebaru]	: memindahkan / merename sebuah file
+rm [namafile]	: remove, mendelete file
+rmdir [namafolder]	: removeDirectory, mendelete folder
+rm -rf	: -r	: recursive, -f	: force, mendelete folder sampai subfolder tanpa konfirmasi
+clear	: membersihkan layar

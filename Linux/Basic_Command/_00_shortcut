@@ -1,0 +1,4 @@
+ctrl + a 		: pindah ke awal baris
+ctrl + i 		: pindah ke akhir baris
+ctrl + r		: untuk mencari perintah yang pernah kita ketikan (untuk beralih ke pencarian selanjutnya ttekan kembali ctrl+r )
+ctrl + alt + t	: membuka terminal

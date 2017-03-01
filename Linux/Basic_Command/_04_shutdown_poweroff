@@ -1,0 +1,2 @@
+shutdown -h +60		: hold, shutdown tunggu sampe 60 menit
+poweroff			: perintah yg lebih simple dibandingkan shutdown 

@@ -1,0 +1,27 @@
+prog1 > namafile	: redirect, membuat output pada prog1 disimpan kedalam sebuah file, jika file sudah ada, maka file akan direplace
+prog1 1> namafile	: identik dengan prog1 > namafile, yaitu akan meredirect output bukan error
+prog1 2> namafile	: mirip dengan prog1 > namafile, tapi hanya stderror yang akan disimpan sedangkan output tidak akan diredirect 
+prog1 >> namafile	: membuat output pada prog1 disimpan kedalam sebuah file, jika file sudah ada, maka output akan ditambahkan dibaris terakhir (TIDAK MEREPLACE) 
+prog1 | prog2		: membuat output prog1 menjadi input bagi prog2
+prog! && prog2		: keduanya akan dieksekusi kalau kondisi dua program tersebut benar ex ls -al && echo "hai"
+
+ex:
+echo "hallo woel"
+
+
+
+
+
+
+
+keterangan: 
+setiap program mempunyai input dan output, pada contoh diatas input masuk ke program1 kemudian output 
+dari program 1 akan diteruskan oleh pipe(pipa) menjadi input bagi program 2.
+
+
+input bisa berupa 	: file, keyboard, network 						STDIN  --> 0
+output bisa berupa	: file, network, shell							STDOUT --> 1
+error bisa berupa	: error report ketika salah memasukan perintah 	STDERR --> 2
+bedanya error dengan output adalah error tidak dapat diriderect (>) sehingga hasilnya tidak disimpan pada file
+
+
