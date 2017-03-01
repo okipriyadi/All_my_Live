@@ -1,0 +1,14 @@
+Viewing the history
+=======================================+
+	git log
+========================================
+
+The git log command is very useful and powerful. With this command, we can get
+all the commits that we did one by one, each one with its most important details. It's
+now time to become more familiar with them.
+
+
+advance log
+========================================================================
+	git log --graph --decorate --pretty=oneline --abbrev-commit
+========================================================================

@@ -1,0 +1,138 @@
+<!--
+When you hear people talking about JavaScript, they often mention the “DOM,” or “Document
+Object Model.” This is one of the most common and important aspects of JavaScript that you’ll
+encounter. You will use it every time you modify a page and every time you insert data or
+modify an interface. In a nutshell, the DOM is a mapping layout model for your HTML and a
+way for JavaScript to get in there and do its thing. The DOM can be a JavaScript developer’s
+best friend after it is mastered.
+
+The DOM is not HTML and not JavaScript, but they are all very interconnected. It contains
+some very basic concepts, and as you lift up the hood to see all the possibilities, you’ll notice
+that it’s much more than a mass of HTML and text. It is the combinations of the elements you
+use (object), the order you choose to display them (model), and an endless offering of access
+points for you to add, delete, or modify any part of the overall structure (document) while
+navigating around with the various methods JavaScript provides.
+
+Step one, and something that many beginners get stuck on conceptually, is that the HTML file
+is a document when we talk about the Document Object Model. Your document is made up
+of a bunch of objects (HTML elements, text, and attributes). Those objects come together in a
+certain order, which is considered the “model.”
+
+JavaScript is all about creating behaviors and data interactions by accessing the DOM. To create
+and control truly interactive experiences through interface design, you will certainly have to
+master and grow accustom to working in this robust environment.
+
+Every document has some kind of structure behind it, whether it’s a chapter of this book, a
+flier for a yard sale, a newspaper, or an HTML document. In this case, we’ll obviously be talking
+about an HTML document, but the principle is true for most things we create.
+The DOM starts with the Web browser. When you visit a website, the browser renders the
+HTML into a document, reads through the elements, and displays them to the user in the
+correct format. This process creates the initial model for the document, and it gets stored so we
+don’t have to do all that work again to access each individual element (we just reference what
+the browser already has stored for the most part).
+Consider the HTML structure shown in Listing 4.1 .
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset= "utf-8 ">
+	<title>Basic DOM example</title>
+</head>
+<body>
+	<h1>Hello World!</h1>
+	<p>While this is a <strong>very basic HTML document</strong>, it actually
+	   serves as a detailed example of the document object model.</p>
+</body>
+</html>
+
+<!--
+At first glance this may look like an extremely basic example of an HTML document, and it is,
+but it’s also a pretty good representation of all the items we have to deal with in the DOM.
+The DOM is made up of items called nodes , which can have parents, children, and siblings
+(just like a family), and this determines its position in the tree. Children are underneath
+parents and siblings are at the same level as other siblings (brothers and sisters, if you will).
+Let’s take a look at the DOM translation of this HTML document in Figure 4.1 .
+In Figure 4.1 , you can see how we create a parent-child relationship in the DOM by moving
+from the top of the document all the way to the bottom as the nodes begin to create a pseudo-
+hierarchy in the diagram. I say “pseudo” because as we approach the bottom of the document
+the branches start to break off into different kinds of nodes that are represented by the circles
+that may technically be at the same level as others but are not considered to be relevant in the
+parent-child relationship to each other.
+
+As you may have guessed, there are indeed different types of things we call nodes in the DOM.
+Nodes that represent HTML elements are called element nodes , ones that represent text are
+called text nodes and last are attribute nodes , which represent, you guessed it, attributes. All
+nodes are also children of the overall parent document node , represented at the top of Figure
+
+
+Figure4.1 
+
+									document
+										|
+									 <html>
+									 	|
+							  ----------------------
+							  |						|
+							<head>				 <body>
+							  |						|
+					   --------------		----------------
+					   |			|		|				|
+					<title> 	  <meta>   <h1>	 			<p>
+					   |			|		|			-----------
+					text 			attr 	text     <strong>		text
+														|
+													   text
+
+Element Nodes
+Element nodes will occupy(menempati/menduduki) the majority of your document and are the basis for how you will
+move around (we’ll get to that in a bit). These nodes will define your structure and hold most
+of the data and content you will want to interact with and modify. The element nodes occupy
+most of the document and create the tree-like structure you see in Figure 4.1 .
+element node adalah element(yang dimulai dengan kurung siku buka "<" dan diakhiri oleh kurung siku tutup ">")
+ 
+Text Nodes
+Text nodes are similar to the element nodes because of how they sit in the DOM and the fact
+that we use the same JavaScript methods to access them. Of course, some differences exist
+between these two types of nodes, or we wouldn’t need to learn more terminology.
+
+The most notable difference is the way they look; element nodes are contained in angled brack-
+ets (greater than and less than symbols). Text nodes are not; they are between element nodes.
+
+One other important distinction between the two node types is that text nodes cannot have
+children (they’ve been trying for years, no luck). You can see in Figure 4.1 that the <p> element
+node has a text node and another element node <strong> has children. However, although
+the element node <strong> is technically inside the paragraph’s content in the HTML struc-
+ture, it is not a child of the text node. This is where we start getting into the pseudo-hierarchy
+mentioned earlier. Instead of nesting the tree further, we break off into a whole new branch
+and dead end at the text node. 
+
+Attribute Nodes
+Attribute nodes, like the document node, are easy to overlook when building your DOM
+because they appear to be part of the element, but they’re an entirely different type of node,
+and are extremely important. They’re also treated differently than text and element nodes are.
+in this figure you can see the attribute node called out separately from the element node.
+
+<div id=”header”>	</div>
+ 	|	  |			   |
+ 	| atribute node    |
+ 	|                  |
+ 	-------------------
+ 	        |
+ 	     element node
+ 	     
+Like text nodes, attribute nodes cannot have children (it’s a sad story), but they’re also not
+children themselves. That’s right, attribute nodes are not considered to be children of their
+containing element; it’s a little odd, but stick with me here. They sit in the DOM structure
+under element nodes because they’re always attached to element nodes, but they are not chil-
+dren—they are treated and accessed differently. 
+They both do their own thing against the norm and refuse to conform. This is the reason attribute
+nodes have their own methods in JavaScript. We use basic JavaScript methods to get near an
+attribute, but after we get there we have to use special methods to get inside. This may seem a
+little confusing, but when you get used to it, it’s actually pretty nice to have them separate.
+When writing efficient JavaScript (don’t worry, you will be by the time we’re done here),
+you’ll be constantly adding and removing classes from element nodes, and this is where we’ll
+be heavily using attribute nodes.   
+ -->
+ 
+ 

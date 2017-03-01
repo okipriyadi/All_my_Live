@@ -1,0 +1,136 @@
+Pointers are one of the most fundamental things to understand in the C programming language.
+So what’s a pointer? A pointer is just the address of a piece of data in memory.
+Pointers are used in C for a couple of reasons.
+
+1. Instead of passing around a whole copy of the data, you can just pass a pointer.
+2. You might want two pieces of code to work on the same piece of data rather than a separate copy.
+
+Pointers help you do both these things: avoid copies and share data. To understand what pointers are,
+you’ll need to dig into the memory of the computer.
+
+Every time you declare a variable, the computer creates space for it somewhere in memory. If you declare a
+variable inside a function like main(), the computer will store it in a section of memory called the stack. If
+a variable is declared outside any function, it will be stored in the globals section of memory.
+======================================================
+	int y = 1;
+	int main(){
+		int x = 4;
+		return 0;
+	}
+======================================================
+Variable y will live in the globals section. ex : Memory address 1,000,000. Value 1
+Variable x will live in the stack. ex: Memory address 4,100,000. Value 4
+
+The computer might allocate, say, memory location 4,100,000 in the stack for the x variable. If you assign
+the number 4 to the variable, the computer will store 4 at location 4,100,000.
+
+If you want to find out the memory address of the variable, you can use the & operator:
+======================================================
+		printf("x is stored at %p\n", &x);
+======================================================
+
+This is what the code will print: x is stored at 0x3E8FA0. This is 4,100,000 in hex (base 16) format
+The address of the variable tells you where to find the variable in memory. That’s why an address is also
+called a pointer, because it points to the variable in memory.
+
+
+lihat contoh:
+======================================================
+#include <stdio.h>
+void go_south_east(int lat, int lon){
+	lat = lat - 1;
+	lon = lon + 1;
+}
+
+int main(){
+	int latitude = 32;
+	int longitude = -64;
+	go_south_east(latitude, longitude);
+	printf("Avast! Now at: [%i, %i]\n", latitude, longitude);
+	return 0;
+}
+======================================================
+The program starts a ship at location [32, –64], so if it heads southeast, the ship’s new position
+will be [31, –63].	At least it will be if the code works...
+he code should move the ship southeast from [32, –64] tothe new location at [31, –63]. But if you compile and run the
+program, this happens:
+============================
+Avast! Now at: [32, –64]
+============================
+
+The ship’s location stays exactly the same as before. The code broke because of the way that C calls functions.
+1. Initially, the main() function has a local variable called longitude that had value 32.
+2. when the computer calls the go_south_east() function, it copies the value of the longitude variable
+   to the lon argument. This is just an assignment from the longitude variable to the lon variable.
+   When you call a function, you don’t send the variable as an argument, just its value.
+3. when the go_south_east() function changes the value of lon, the function is just changing its local copy.
+   That means when the computer returns to the main() function, the longitude variable still has its original
+   value of 32.
+
+But if that’s how C calls functions, how can you ever write a function that updates a variable?
+It’s easy if you use pointers...
+
+Instead of passing the value of the latitude and longitude variables, what happens if you pass their addresses? If the
+longitude variable lives in the stack memory at location 4,100,000,
+what happens if you pass the location number 4,100,000 as a parameter to the go_south_east() function?
+If the go_south_east() function is told that the latitude value lives at location 4,100,000, then it will
+not only be able to find the current latitude value, but it will also be able to change the contents of
+the original latitude variable. All the function needs to do is read and update the contents of
+memory location 4,100,000
+
+Because the go_south_east() function is updating the original latitude variable, the computer will be able
+to print out the updated location when it returns to the main() function.
+
+----------------------
+USING MEMORY POINTERS
+----------------------
+There are three things you need to know in order to use pointers to read and write data.
+1. Get the address of a variable.
+   You’ve already seen that you can find where a variable is stored in memory using the & operator:
+   ====================================
+		int x = 4;
+		printf("x lives at %p\n", &x);
+		int *address_of_x = &x;
+   ====================================
+   *note: The %p format will print out the location in hex (base 16) format. 
+   *note: & will find the address of the variable:4,100,000
+   But once you’ve got the address of a variable, you may want to store it
+   somewhere. To do that, you will need a pointer variable. A pointer
+   variable is just a variable that stores a memory address. When you
+   declare a pointer variable, you need to say what kind of data is stored
+   at the address it will point to:
+2. Read the contents of an address.
+   When you have a memory address, you will want to read the data
+   that’s stored there. You do that with the * operator:
+   ======================================
+		int value_stored = *address_of_x;
+   ======================================
+   The * and & operators are opposites. The & operator takes a piece of data and tells you where it’s stored. 
+   The * operator takes an address and tells you what’s stored there. Because pointers are sometimes called 
+   references, the * operator is said to dereference a pointer.
+3. Change the contents of an address.
+   If you have a pointer variable and you want to change the data at the address where the variable’s 
+   pointing, you can just use the * operator again. But this time you need to use it on the left side of
+   an assignment:
+   ======================================
+   		*address_of_x = 99;
+   ======================================
+   
+OK, now that you know how to read and write the contents of a memory location, it’s time for you to fix 
+the go_south_east() function.
+
+======================================================
+#include <stdio.h>
+void go_south_east(int *lat, int *lon){
+	*lat = *lat - 1;
+	*lon = *lon + 1;
+}
+
+int main(){
+	int latitude = 32;
+	int longitude = -64;
+	go_south_east(&latitude, &longitude);
+	printf("Avast! Now at: [%i, %i]\n", latitude, longitude);
+	return 0;
+}
+======================================================

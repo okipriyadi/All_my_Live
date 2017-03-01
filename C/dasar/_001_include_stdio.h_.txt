@@ -1,0 +1,12 @@
+di bagian awal program biasanya ada source berupa:
+=================================
+#include <stdio.h>
+=================================
+apakah itu? C is a very, very small language and it can do almost nothing without
+the use of external libraries. You will need to tell the compiler what external code to use by
+including header files for the relevant libraries. The header you will see more than any other
+is stdio.h. The stdio library contains code that allows you to read and write data from and
+to the terminal
+
+
+

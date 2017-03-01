@@ -1,0 +1,22 @@
+To achieve this result, we can use the git blame <filename> command.
+=======================================
+	git blame <filename>
+=======================================
+Suppose now you found that the modification you are looking for is the one
+made in the d0dd1f61 commit; to see what happened there, type the git show
+d0dd1f61 command:
+
+The git show command is a multipurpose command, it can show you one or more
+objects; in this case we have used it to show the modification made in a particular
+commit using the 
+======================================
+	git show <commit-hash> format.
+======================================
+
+The git show command is a multipurpose command, it can show you one or more
+objects; in this case we have used it to show the modification made in a particular
+commit using the git show <commit-hash> format.
+The git blame and git show commands have quite a long list of options; the
+purpose of this paragraph is only to point the reader to the way changes should
+be traced on a file; you can inspect other possibilities using the ever useful git
+<command> --help command.

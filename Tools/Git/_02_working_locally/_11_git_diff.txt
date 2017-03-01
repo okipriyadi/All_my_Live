@@ -1,0 +1,17 @@
+diff digunakan untuk melihat perbedaan antar branch (dari point of view target branch) 
+========================================================
+	git diff <source branch>..<target branch>  
+	eg: $ git diff master..NewWork
+========================================================
+
+Another way to check differences is to use git log :
+========================================================
+	$ git log NewWork..master
+========================================================
+This command lets you see commits that differ from the NewWork branch to the master branch.
+There is even a git shortlog command to give you a more compact view
+========================================================
+	git shortlog Newwork..master
+========================================================
+
+

@@ -1,0 +1,80 @@
+<!--
+SYNCHRONOUS 
+	Synchronous Ajax is not very common, but it is perfectly valid. You probably won’t use it, but
+just in case you hit a situation where you need to, it’s good to know what it is.
+Synchronous Ajax means that the Ajax call happens at the same time as all the other requests
+in your application. There are positives and negatives to this. Making your Ajax calls synchro-
+nous will block the download of other assets until the request completes, which can create a
+weird user experience because of some extra-heavy lifting that needs to happen before a page is
+completely rendered in the browser.
+	On a more positive note, if you can find a way around the slowness, using synchronous Ajax
+calls opens up the opportunity to store Ajax data into an object and play around with the
+timing of certain functions being executed. If an Ajax call is processing something critical for
+the user to the point that you need to block them from doing something while the request is
+going on, a synchronous Ajax call may be what you need.
+
+Asynchronous
+	Asynchronous Ajax is much more common. You’ll probably use this 99%.  
+it’s fairly independent and separated from the rest of the assets in a page or Web application. 
+These Ajax interactions happen behind the scenes and don’t really block anything from downloading. 
+Even if you’re executing an Ajax call with the onload event, the timing of that is usually 
+slightly after the normal page load.
+	Asynchronous calls can happen at any point and be triggered by any event ( click , focus ,
+blur , touchstart , and so on). The point of them is that they don’t happen in one large chunk
+bundled together with the rest of the HTTP requests on a page.
+	Using an asynchronous call removes the blocking nature of the synchronous call because the
+user can continue to interact with the page in other ways while the request is being processed.
+
+The XMLHttpRequest
+The XMLHttpRequest object is the heart of any Ajax call. 
+Creating an instance of the XMLHttpRequest is the first step in making an Ajax call, and it’s
+pretty easy. 
+-->
+
+//Creating an Instance of the XMLHttpRequest
+var xhr = new XMLHttpRequest()
+
+<!--
+Cross-Browser Issues
+Microsoft first invented the XMLHttp object that later became the more popular XMLHttpRequest . 
+This does cause a bit of an issue because the XMLHttp object is the only Ajax object supported 
+in Internet Explorer 5 and Internet Explorer 6. No one supports IE 5 anymore, so we’ll ignore that.
+Even though support for IE 6 is falling fast, it’s worth addressing that problem up front.
+If someone were to visit your Ajax enabled application with IE 6, it wouldn’t support the
+normal XMLHttpRequest object, but rather the older XMLHttp object. It’s a little bit of a pain,
+but if you don’t personally support IE 6 in your development process anymore, don’t worry
+about it. It’s pretty easy to do a quick support check for the XMLHttpRequest and move on
+from there, just in case someone from that rapidly falling market share were to stumble upon
+your application.
+-->
+
+if ( window.XMLHttpRequest ) { // check for support
+	// if it's supported, use it because it's better
+	xhr = new XMLHttpRequest();
+} else if ( window.ActiveXObject ) { // check for the IE 6 version
+	// save it to the xhr variable
+	xhr = new ActiveXObject("Msxml12.XMLHTTP");
+}
+
+
+<!--
+Because this is a very common bit of functionality to have with any Ajax call and will probably
+be reused over and over, it is best to save it to a function. You will find similar functions all
+over the Web with XMLHttpRequest feature detection.
+
+Because this is a function that passes information into another function, the first
+step is to initialize the variable, then run the normal if statement and return the variable so it
+can be passed into another function. 
+-->
+
+function getHTTPObject() {
+	// initialize the variable
+	var xhr;
+	if (window.XMLHttpRequest) { // check for support
+		xhr = new XMLHttpRequest();
+	} else if (window.ActiveXObject) { // check for the IE 6 Ajax
+		xhr = new ActiveXObject("Msxml2.XMLHTTP");
+	}
+	return xhr;
+}
+

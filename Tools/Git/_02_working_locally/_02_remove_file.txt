@@ -1,0 +1,26 @@
+command to back the file in the untracked status.
+===========================================================
+	git reset HEAD <file>
+===========================================================
+It should be clear now. It worked as expected: our file returned in the untracked state, as it was before 
+the add command. 
+
+**note: Git reset is a powerful command, and it can completely destroy your actual work if used improperly. 
+Do not play with it if you don't know exactly what you are doing.
+
+
+Another way to unstage a file that you just added is to use the git rm command.
+If you want to preserve the file on your folder, you can use the --cached option.
+This option simply removes it from the index, but not from the filesystem. However,
+remember that git rm is to remove files from the index. So, if you use the git rm
+command on an already committed file, you actually mark it for deletion. The next
+commit will delete it.
+
+==================================================================================
+	git rm -f <file> #untuk menghapus dari index dan sekaligus mendelete filenya
+		atau
+	git rm -cached <file> #untuk menghapus dari index tapi tidak mendelete filenya 
+						   sehingga file berstatus sebagai untracked
+==================================================================================
+
+

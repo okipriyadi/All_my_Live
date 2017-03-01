@@ -1,0 +1,29 @@
+<!--
+This is a simple HTML snippet consisting of two ID values that we can use to access each
+element. Most times you will have natural IDs on your HTML elements (like "header" in the
+example) that you can use for targeting, but sometimes you do need to add in extra (or unnatu-
+ral) IDs (like "homelink" in the example) to gain quick access to an element node. There are
+other ways, but performance-wise, this is the fastest. In Listing 4.2.1 let’s take a look at the
+JavaScript you would use to access these nodes.
+-->
+
+<!-- targeting by ID -->
+<div id="header">
+	<h1> <a href="/" id="homelink">Title of your site </a> </h1>
+</div>
+
+<!--
+JavaScript Used to Access an Element by Its ID
+document.getElementById("header");
+document.getElementById("homelink");
+
+As I mentioned earlier, you have to access the document object before you can get to the node
+you want. After you have access to the node, you can store, modify, or retrieve extra infor-
+mation about the element with the plethora of methods built into JavaScript that we will be
+exploring throughout this entire book. It’s important to remember that, although we are using
+the ID attribute to access the node, we are still accessing the element node and not the attribute
+node at this point. If we were to access the content of the ID attribute (the text “ header ” and
+“ homelink ”), we would be accessing the attribute node, but since we’re not doing that, we’re
+still on the element node.
+-->
+

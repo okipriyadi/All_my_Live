@@ -1,0 +1,17 @@
+<html lang="en-US">
+<head>
+	<script type="text/javascript" src="../../jquery-1.9.0.js"></script>
+	<script type="text/javascript" src="jquery.blockUI.js"></script>
+</head>
+<body>
+	<input type="submit" value="Default Message" class="myButton" id="default">
+</body>
+</html>
+
+<script>
+	$("#default").click(function(){
+		$.blockUI();
+		// setelah dua detik panggil unblockUI 
+		setTimeout($.unblockUI, 2000);
+	})
+</script>

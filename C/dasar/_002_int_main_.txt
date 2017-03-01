@@ -1,0 +1,21 @@
+di bagian awal program biasanya ada source berupa:
+=================================
+int main() {
+
+}
+=================================
+All C code runs inside functions. The most important function you will
+find in any C program is called the main() function. The main()
+function is the starting point for all of the code in your program.
+
+The computer will start running your program from the main()
+function. The name is important: if you don’t have a function called main(),
+your program won’t be able to start.
+
+The main() function has a return type of int. So what does this mean?
+Well, when the computer runs your program, it will need to have some way of
+deciding if the program ran successfully or not. It does this by checking the return
+value of the main() function. If you tell your main() function to return 0, this
+means that the program was successful. If you tell it to return any other value,
+this means that there was a problem
+

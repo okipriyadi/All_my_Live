@@ -1,0 +1,16 @@
+Git is open source software. you can download it for free :
+
+1. for windows machine:  http://git-scm.com . 
+2. for Mac user:         http://git-scm.com/downloads ;
+3. for Linux user, you probably have Git out of the box (if not, use the apt- get install git command 
+   or equivalent).
+ 
+ -------------------------------  
+ Running our first Git command
+ -------------------------------
+ 1. Open a prompt and simply type git (or the equivalent, git --help )
+	If Git has been installed correctly, typing git without specifying anything else will
+	result in a short help page, with a list of common commands. If not, try reinstalling
+	Git, ensuring that you have checked the Use Git from the Windows Command
+	Prompt option. Otherwise, Git will be available only within the embedded Bash shell.
+	

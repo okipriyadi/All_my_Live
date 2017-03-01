@@ -1,0 +1,52 @@
+Obviously, we can create and push a new branch to the remote to make our work
+public and visible to other collaborators. For instance, I will create a new branch for
+my first recipe; then, I will push this branch to the remote GitHub server. Follow
+these simple steps:
+1.	 Create a new branch, for instance, Pasta  
+	 git checkout –b Pasta 
+2.	 Add to it a new file, for example, Spaghetti-Carbonara.md , and commit it.
+3.	 Push the branch to the remote using
+=========================================================== 
+     git push -u origin Pasta .
+===========================================================
+
+Before continuing, we have to examine in depth some things that happened after we
+used the git push command.
+
+The origin
+-----------
+With the git push –u origin Pasta command, we told Git to upload our Pasta
+branch (and the commits within it) to the origin. The origin is the default remote
+name of a repository, like master is the default branch name. When you clone a
+repository from a remote, that remote becomes your origin alias. When you tell Git
+to push or pull something, you often have to tell it about the remote you want to use.
+Using the origin alias, you tell Git that you want to use your default remote.
+If you want to see remotes actually configured in your repository, you could type a
+simple git remote command, followed by -v ( --verbose ) to get some more details:
+===================================================
+	git remote -v
+===================================================
+
+Tracking branches
+------------------
+Using the -u option, we told Git to track the remote branch. Tracking a remote
+branch is the way to tie your local branch with the remote one. Note that this
+behavior is not automatic; you have to set it if you want it (Git does nothing until
+you ask for it!). When a local branch tracks a remote branch, you actually have a local
+and remote branch that can be kept easily in sync. This is very useful when you have
+to collaborate with some remote coworkers at the same branch, allowing all of them
+to keep their work in sync with other people's changes.
+Furthermore, consider that when you use the git fetch command, you will get
+changes from all tracked branches. While you use the git push command, the
+default behavior is to push to the corresponding remote branch only.
+To better understand the way our repository is now configured, try to type
+==================================================
+	git remote show origin
+==================================================
+
+As you can see, both the Pasta and master branches are tracked.
+You can also see that your local branches are configured to push and pull to remote
+branches with the same name. However, remember that it is not mandatory to have
+local and remote branches with the same name. The local branch foo can track the
+remote branch bar and vice versa; there are no restrictions.
+

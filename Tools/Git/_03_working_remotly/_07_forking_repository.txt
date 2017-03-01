@@ -1,0 +1,20 @@
+Forking a repository
+--------------------
+
+Forking is a common concept for a developer. If you have already used a GNU-
+Linux-based distribution, you would know that there are some forefathers, such as
+Debian, and some derived distro, such as Ubuntu. They are commonly called the
+forks of the original distribution.
+In GitHub, things are similar. At some point, you will find an interesting open-source
+project that you want to modify slightly to perfectly fit your needs. At the same time,
+you want to benefit from bug fixes and new features from the original project, all the
+time keeping in touch with your work. The right thing to do in this situation is to
+fork the project.
+
+However, first, remember that fork is not a Git feature, but a GitHub invention.
+When you fork on GitHub, you get a server-side clone of the repository on your
+GitHub account. If you clone your forked repository locally in the remote list, you
+would find the origin alias that points to your account repository. The original
+repository will generally assume the upstream alias (but this is not automatic, you
+have to add it manually):
+

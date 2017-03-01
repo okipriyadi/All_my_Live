@@ -1,0 +1,75 @@
+<!--
+Now that we have a strong grasp(pegangan/genggaman) of how to work with and target element nodes, 
+we can start working within those nodes and play around with the attribute node . 
+An attribute is contained inside an element node, but is not considered to be a child of
+that node, so we need some special methods to get, modify, or remove that information. Those
+methods are
+
+1. getAttribute()
+2. setAttribute()
+3. removeAttribute()
+4. hasAttribute()
+
+In all these methods we target the attribute and return the value, so in an example of
+class="visible", we would be targeting “class” and returning the value “visible”.
+Getting and changing attributes is paramount to writing a Web application that performs well.
+Because many of the most common interactions we create, like hide/show, can be created more
+efficiently through CSS, those can be as simple as adding or removing a class. In this example
+we will be working with the following HTML shown in Listing 4.6 .
+-->
+
+
+<img src="images/placeholder.png" class="show" alt="placeholder image" id="plc">
+
+
+<!--
+Getting an Attribute
+Before we can get an attribute, we need to jump into the DOM at an element node (using one
+of the methods we just learned about), and then we can gain access to that element’s attribute.
+This is one of the ways we gain more information about an element. The getAttribute()
+method takes one argument, which is the name of the attribute you want to target.
+Before we target an attribute, much like we did with checking the NodeList length, we want
+to make sure an element contains the attribute we’re looking for. This can be done with the
+hasAttribute() method. Suppose you want to target the image referenced in Listing 4.6 and
+get the class value. The JavaScript in Listing 4.6.1 will illustrate how you might accomplish that
+task.
+-->
+
+<script>
+// first we target the element and check if it has a class on it
+if(document.getElementById("plc").hasAttribute ("class")) {
+	// after we know a class exists, we can then get the value
+	document.getElementById("plc").getAttribute ("class");
+	// this would return the value of "show", which is the class on our image
+	
+	// replace the current class with a value of "hidden" (from “ visible ” to “ hidden ”)
+	document.getElementById("plc").setAttribute("class", "hidden");
+	// add a new attribute to the image
+	document.getElementById("plc").setAttribute ("title", "we moved this element off screen");
+	
+	//we can then remove it
+	document.getElementById("plc").removeAttribute("title");
+}
+</script>
+
+<!--
+You may be well aware that a class exists in the area you’re targeting, but using
+hasAttribute() is more of a best practice, just in case it doesn’t exist (it happens). We don’t
+have to waste valuable processing time executing the JavaScript for no reason.
+
+With this example, you might consider the following CSS
+.visible {
+position: static;
+}
+/* this is applied when our class is changed and moves the image out of view */
+.hidden {
+position: absolute;
+top: -9999px;
+left: -9999px;
+}
+
+Note
+It’s important to not use display: none when working like this in CSS because screen read-
+ers cannot view content that is set to display: none . That is why we choose to hide content
+like this by simply moving it off the screen.
+-->

@@ -1,0 +1,84 @@
+----------------------------------
+	Setting up a new repository
+----------------------------------
+A repository ( or we call repo) is a container for your entire project. Every file or subfolder within it 
+belongs to that repository. Physically, a repository is nothing other than a folder that contains 
+a special .git folder, the folder where the magic happens.
+
+Let's try to make our first repo. Choose a folder you like, and type : 
+========================
+	git init
+========================
+
+
+
+----------------------------------
+	ADD FILE
+----------------------------------
+if you want to put the file under the control of Git, so you need to tell the git like this
+==================================
+	git add [name_of_the_file]
+==================================
+jika file yang akan ditambahkan banyak maka bisa dilakukan add untuk ke semuanya dengan git add . (titik):
+==================================
+	git add .
+==================================
+tambahkan file dengan pola tertentu
+==================================
+git add *.txt
+==================================
+
+The git add command tells Git that we want it to take care of that file and check it
+for future modifications.
+
+
+----------------------------------
+	CHECK STATUS
+----------------------------------
+Using the git status command
+==================================
+	git status
+==================================
+jika ada file yang belum ditambahkan ke git untuk dicontrol, git status akan menampilkan 
+++++++++++++++++++++++++++++++++++++++++++++++++
+	Untracked files:
+	(use "git add <file>..." to include in what 
+	will be committed)
+++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+----------------------------------
+	Commit
+----------------------------------
+after we add the file using git add, Git knows about our file, but we have to perform another step
+to fix the snapshot of its content. We have to commit it using the appropriate git
+commit command. This time, we will add some flavor to our command, using the
+--message (or -m ) subcommand, as shown here:
+
+==========================================
+	git commit --message "[our message]"
+==========================================
+Feel the magic—a new branch (master) is born!
+With the commit of MyFile.txt , we have finally fired up our repo. It now has a
+master branch with a file within it. We will play with branches in the forthcoming
+chapters. Right now, think of it as a course of our repository, and keep in mind that a
+repository can have multiple courses that often cross each other.
+
+
+----------------------------------
+How to modify a commited file
+----------------------------------
+Now, we can try to make some modifications to the file and see how to deal with it
+after the file was modified and you perform git status it will show 
+++++++++++++++++++++++++++++++++++++
+	Changes not staged for commit:
+	bla bla bla
+++++++++++++++++++++++++++++++++++++
+As you can see, Bash shell warns us that there are some modifications painting the
+name of the modified files in red. Here, the git status command informs us that
+there is a file with some modifications and that we need to commit it if we want to
+save this modification step in the repository history.
+However, what does no changes added to commit mean? It is simple. Git makes
+you take a second look at what you want to include in the next commit. If you have
+touched two files but you want to commit only one, you can add only that one.
+If you try to do a commit without skipping the add step, nothing will happen. 

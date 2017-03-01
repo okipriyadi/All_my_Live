@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+	<title>How to add jQuery blockUI.</title>
+	<link rel="stylesheet" href="01b_style.css" />
+	
+	<!--jQuery-->
+	<script type="text/javascript" src="../../jquery-1.9.0.js"></script>
+	<script type="text/javascript" src="jquery.blockUI.js"></script>
+</head>
+<body>
+	
+	<!--HTML For Page Block Button-->
+	<h3>Demo : Page Block</h3>
+	<p>
+        <input type="submit" value="Default Message" class="myButton" id="default">
+        <input type="submit" value="Custom Message" class="myButton" id="custommessage">
+	</p>
+	
+	<hr />
+	
+	<!--HTML For Element Block Button-->
+	<h3>Demo : Element Block</h3>
+	
+	<p>
+		<input type="submit" value="Block Div With Message" id="blockElement" class="myButton">
+		<input type="submit" value="Unblock Element" id="unblockElement" class="myButton">
+	</p>
+	
+	<!--HTML For Element that will be blocked-->
+	<div class="blockMe" style="position: static;">
+        <p>
+			It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+		</p>
+		<p>
+			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+		</p>
+	</div>
+	
+	<hr />
+	
+	<!--HTML For Login PopUp Button-->
+	<h3>Login Form</h3>
+	<p>
+		<button id="loginButton" class="myButton">Login</button>
+	</p>
+	<!--Below Div will be load when above button clicked-->
+	<div style="display: none;" id="loginForm">
+		<p><label>Username:</label><input type="text" name="demo1"></p>
+		<p><label>Password:</label><input type="text" name="demo1"></p>
+	</div>
+	
+</body>
+</html>
+
+
+
+<script>
+		$(function()
+		{
+			/*
+				We are using setTimeout so after defined millisecond
+				page will be automatically unblocked
+			*/	
+			
+			
+			//	Default Page Block
+			$('#default').click(function()
+			{
+				$.blockUI();
+				setTimeout($.unblockUI, 2000);
+			});
+			
+			/*
+				adding custom block message
+			*/	
+			$('#custommessage').click(function()
+			{
+				$.blockUI(
+				{
+					/*
+						message displayed when blocking (use null for no message)
+					*/
+					message: '<h1><img src="http://s13.postimg.org/80vkv0coz/image.gif" /> Please Wait Custom Message...</h1>'
+				});
+				setTimeout($.unblockUI, 3000);
+			});
+			
+			/*
+				adding element block with custom message and css
+			*/
+			
+			$('#blockElement').click(function()
+			{
+				$('div.blockMe').block(
+				{
+					/*
+						message displayed when blocking (use null for no message)
+					*/
+					message: '<h1>Processing...</h1>',
+					/*
+						styles for the message when blocking; if you wish to disable 
+						these and use an external stylesheet then do this in your code: 
+						$.blockUI.defaults.css = {}; 
+					*/
+					css: { border: '3px solid #a00' }
+				});
+			});
+			
+			/*
+				un block blocked element
+			*/
+			$('#unblockElement').click(function()
+			{
+				$('div.blockMe').unblock();
+			});
+			
+			/*
+				show login form in page block
+			*/
+			$('#loginButton').click(function()
+			{
+		        $.blockUI(
+				{
+					/*
+						giving DOM object as message will 
+						show given DOM html as block message,
+						In our case it will show login form
+					*/
+					message: $('#loginForm')
+				});
+		 
+		        setTimeout($.unblockUI, 2000); 
+		    });
+		});
+</script>

@@ -1,0 +1,52 @@
+----------------------------------
+	ADD FILE
+----------------------------------
+if you want to put the file under the control of Git, so you need to tell the git like this
+==================================
+	git add [name_of_the_file]
+==================================
+jika file yang akan ditambahkan banyak maka bisa dilakukan add untuk ke semuanya dengan git add . (titik):
+==================================
+	git add .
+==================================
+tambahkan file dengan pola tertentu
+==================================
+	git add *.txt
+==================================
+
+The git add command tells Git that we want it to take care of that file and check it
+for future modifications.
+
+----------------------------------
+Ignoring some files and folders
+----------------------------------
+Often, we work with temp or personal files that we don't want to commit in
+the repository. So, when you commit all files, it is useful to skip certain kinds of
+files or folders. To achieve this result, we can create a .gitignore file in the repository. Git will
+read it and then skip the files and folders we listed inside it.
+
+Let's try to do this in our repository, C:\Repos\MyFirstRepo . Perform the
+following steps:
+	1.	 Browse to C:\Repos\MyFirstRepo .
+	2.	 Create a .gitignore file using your preferred editor.
+	3.	 Put this text inside it:
+		 ==========================================================+
+		 # === This is a sample of .gitignore file ===
+		 # Ignore temp files
+		 *.tmp
+		 ==========================================================+
+	4.	 Save the file.
+	5.	 Add the file to the index.
+	6.	 Commit the .gitignore file.
+	7.	 Create a temp file fileToIgnore.tmp with a simple touch command.
+	8.	 Try to add all of the files in your working directory to the index and verify
+		 that Git will not add anything.
+
+The syntax of a .gitignore file is quite simple. Lines starting with # are comments,
+and they will be ignored. In each line of the file, you can add something to skip. You
+can skip a single file or folder, certain files by extension, as we did with *.tmp files,
+and so on.
+
+***Note : If you have added some *.tmp files to the index before introducing the .gitignore file, they will 
+stay under revision control. You have to remove them manually if you want to skip them.
+

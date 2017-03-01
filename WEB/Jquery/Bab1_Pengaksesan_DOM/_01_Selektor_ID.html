@@ -1,0 +1,29 @@
+<!--Pada dasarnya selektor di jquery mirip denga selektor di CSS
+Ciri selektor ID
+1. diawali dengan #
+2. diikuti dengan isi atribut ID milik elemen yang dipilih
+-->
+
+<!doctype html>
+<html>
+<head>
+	<title></title>
+	<script src="../jquery-1.9.0.js" >
+	</script>
+	<script>
+		$(document).ready(function(){
+			alert($("#kota").html());
+		})
+	</script>
+</head>
+<body>
+	<div id="kota">
+		<ul>
+			<li>Jakarta</li>
+			<li>Bangkok</li>
+			<li>Amsterdam</li>
+			<li>Innabrouck</li>
+		</ul>
+	</div>
+</body>
+</html>

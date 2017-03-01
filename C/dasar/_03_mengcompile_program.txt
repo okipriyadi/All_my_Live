@@ -1,0 +1,9 @@
+1. Save the code ex: cards.c
+2. Compile with gcc cards.c -o cards at a command prompt or terminal.
+   ==================================================================
+	gcc cards.c -o cards
+   ==================================================================
+3. Run by typing cards on Windows, or ./cards on Mac and Linux machines.
+   If you are using a Mac or Linux machine, the compiler will have created the machine
+   code in a file called cards. But on Windows, all programs need to have a
+   .exe extension, so the file will be called cards.exe.

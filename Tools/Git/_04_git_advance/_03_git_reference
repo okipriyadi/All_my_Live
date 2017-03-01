@@ -1,0 +1,46 @@
+The HEAD file instead is located in the .git folder,HEAD is a symbolic reference; symbolic references are references that point to other
+references, using the ref: <reference> syntax. In this case, the HEAD is currently
+pointing to the master branch; if you check out another branch, you will see the file's
+content change, as shown in the following screenshot
+
+Ancestry references
+------------------
+In Git you often need to reference the past (for example, the last commit); for this
+scope, we can use two different special characters which are the tilde ~ and the caret ^ .
+
+Suppose you want to completely delete the last x4y5z6 commit:
+
+-------a1b2c3----------x4y5z6 
+A way to do this is to move the HEAD pointer to the a1b2c3 commit, using the
+--hard option:
+=====================================
+	$ git reset --hard a1b2c3
+=====================================
+Another way to do this is to move the pointer back to the parent commit. To define the
+parent, you have to specify a starting point reference, which can be the HEAD , a specific
+commit, a tag, or a branch and then one of two special characters: the tilde ~ , for the
+first parent and the caret ^ for the second one (remember that commits can have two
+parents when they represent a merge result).
+Let's get under the lens of the tilde ~ . With the <ref>~<number> notation, we can
+specify how many steps backward we are going to take; going back to the example,
+an equivalent of the previous command is this:
+=====================================
+	$ git reset --hard HEAD~1
+=====================================
+
+The HEAD~1 notation tells Git to point to the first parent commit of the actual commit
+(the HEAD , indeed). Note that HEAD~1 and HEAD~ are equivalent.
+You can also go backward by more than one step, simply incrementing the number;
+a HEAD~3 reference will point to the third ancestor of the HEAD :
+
+The second parent
+--------------
+With the ^ caret character, instead we reference the second parent of a commit, but
+only starting from the number 2; the ref^1 notation references the first parent, as
+does the ref~1 notation whereas ref^ and ref~1 are equivalent. Also note that
+ref^1 and ref^ are equivalent
+The ^ and ~ operators can be combined; here's a diagram showing how to reference
+various commits using HEAD as the starting point:
+
+HEAD    			------------> first commit on master 
+HEAD~1 OR HEAD^1	------------>  

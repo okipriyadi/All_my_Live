@@ -1,0 +1,24 @@
+Downloading remote changes
+--------------------------
+The first thing you have to learn when working with remote branches is to check
+whether there are modifications to retrieve.
+Checking for modifications and downloading them. The git fetch command is very helpful. 
+To see it at work, create a new file directly
+on GitHub using the following steps so that we can work with it:
+1.	 Go to your GitHub dashboard and choose the Pasta branch.
+2.	 Click the plus icon on the right-hand side of the repository name to add a new file.
+3.	 Add a new empty file, for example, Bucatini-Amatriciana.md , and commit it directly from GitHub:
+
+Now, we can make use of git fetch :
+===================================================================
+	git fetch
+===================================================================
+
+The git fetch command downloads differences from the remote, but does not
+apply them. With the help of git status , we will see more details.
+As you can see, Git tells us there is one downloaded commit we have to apply to
+keep our branch in sync with the remote counterpart.
+
+
+Applying downloaded changes
+---------------------------

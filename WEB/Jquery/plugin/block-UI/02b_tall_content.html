@@ -1,0 +1,28 @@
+<script type="text/javascript" src="../../jquery-1.9.0.js"></script>
+<script type="text/javascript" src="jquery.blockUI.js"></script>
+
+<p>
+	<button id="Button" class="myButton">tall content</button>
+	<button id="Button_noncss" class="myButton">without css parameter</button>
+</p>
+
+<script>
+	// ini bukan tinggi dalam kontainer, tp jarak antara batas atas layar dengan container (top)
+	$('#Button').click(function()
+		{
+	        $.blockUI({ 
+            	message: "alsdjakl <br> lasjd <br> akls <br> dla <br> djlaksjdlaksjd <br> laksjd <br> lad", 
+            	css: { top: '20%' } 
+        }); 
+	 
+	        setTimeout($.unblockUI, 5000); 
+	    });
+	$('#Button_noncss').click(function()
+		{
+	        $.blockUI({ 
+            	message: "alsdjakl <br> lasjd <br> akls <br> dla <br> djlaksjdlaksjd <br> laksjd <br> lad"
+        }); 
+	 
+	        setTimeout($.unblockUI, 5000); 
+	    });
+</script>

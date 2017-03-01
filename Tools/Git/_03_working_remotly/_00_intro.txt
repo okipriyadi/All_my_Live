@@ -1,0 +1,20 @@
+A Git remote is another computer that has the same repository you have on your
+computer. Every computer that hosts the same repository on a shared network can
+be the remote of other computers:
+So, a remote Git repository is nothing other than a remote copy of the same Git
+repository we created locally. If you have access to that host via common protocols
+such as SSH, HTTPS or the custom git:// protocol, you can keep your modification
+with it in sync. To start working with a remote, we have to get one. Today, it is not difficult to
+get a remote. The world has plenty of free online services that offer room for Git
+repositories. One of the most commonly used repository is GitHub
+
+Setting up a new GitHub account
+---------------------------------
+1.	Go to https://github.com .
+2.	Sign up using your e-mail. When done, we are ready to create a brand new repository where we can push our work:
+3.  Go to the Repositories tab, click on the green New button, and choose a name for your repository:
+4. Then, you can write a description for your repository. This is useful to allow people
+who come to visit your profile to better understand what your project is intended
+for. We create our repository as public because private repositories have a cost, as we
+said earlier. Then, we initialize it with a README file. Choosing this GitHub makes a
+first commit for us, initializing the repository that is now ready to use.

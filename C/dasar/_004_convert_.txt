@@ -1,0 +1,6 @@
+atoi: convert text to number
+=============================
+char card_name[3];
+card_name = '1'
+atoi(card_name);
+==============================

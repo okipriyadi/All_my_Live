@@ -1,0 +1,91 @@
+<!--
+Because IDs are unique to each document, getElementById() can return only a single
+element. Sometimes that just doesn’t fly, and we need more than one, or even a group of
+elements. When this is the case, we use getElementsByTagName() in a similar way.
+Targeting an element (node) by tag name is another popular method of creating an access
+point in the DOM. You can both target a group of elements and a single element inside of a
+group if you want. Suppose we have a pretty stripped-down Web page like the one shown in
+
+Note
+A pretty common (and frustrating) mistake in JavaScript syntax is not pluralizing the word “ele-
+ments” in getElementsByTagName() . Pay close attention to this and you’ll save yourself
+some debugging time.
+-->
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>getElementsByTagname Example</title>
+</head>
+<body>
+<h1>Using getElementsByTagname</h1>
+<p>Content paragraph</p>
+<p>Content paragraph</p>
+<p>Content paragraph</p>
+</body>
+</html>
+
+<!--
+We can grab each paragraph in Listing 4.3 with the single line of JavaScript in Listing 4.3.1 .
+==================================================================================================
+document. getElementsByTagName ("p");
+==================================================================================================
+
+
+
+This will return a DOM object called a NodeList . A NodeList is a collection of nodes that main-
+tain their source order. In other words, it’s a list of elements, and those elements stay in the
+same order they appear on the page. 
+The order is pretty important because if the items were
+randomly shuffled, they would be very difficult to access when we need them.
+After we have the NodeList, we will also want to check to see how long it is. Checking its
+length will allow us to make sure values are available before we execute a block of script. We
+can do this with the length method,  .
+
+==================================================================================================
+document. getElementsByTagName ("p").length;
+// will return 3
+// checking the length before executing script
+if(document.getElementsByTagName("p").length > 0) {
+// it returns "3", and 3 is greater than "0", so we're good to go.
+}
+==================================================================================================
+So far we have targeted a group of elements and checked their length; after that, we may want
+to grab an individual node to do some work on. It’s pretty easy to pull an item out of the
+NodeList. There are two ways we can do this:
+1. Using the item method
+2. Using an array syntax
+Both methods will return the same value, so it’s more an issue of personal preference when you
+choose the way you want to access elements in a NodeList. Let’s take a look at them both in
+example below.
+==================================================================================================
+// the first paragraph using the item method
+document. getElementsByTagName ("p").item(0);
+// the first paragraph with array syntax
+document. getElementsByTagName ("p")[0];
+// the second paragraph with the item method
+document. getElementsByTagName ("p").item(1);
+// the second paragraph with array syntax
+document. getElementsByTagName ("p")[1];
+==================================================================================================
+Note
+NodeLists and arrays start at 0, not 1. So the list looks like 0,1,2,3,4, etc. This is why we are
+using 0 in the preceding example to access the first element. If only a single element returns in
+the NodeList, you still have to use the [0] value to grab it.
+
+When we put all this code together, you can see a functional JavaScript snippet starting to
+get created. So far we’ve targeted a NodeList, checked its length, and accessed the individual
+element inside the NodeList. This is a very common thing to do in JavaScript, so let’s see what
+it looks like all put together in Listing 4.3.4 .
+==================================================================================================
+// checking the length before executing script
+if(document. getElementsByTagName ("p").length > 0) {
+		// it returns "3", and 3 is greater than "0", so we're good to go.
+		// let's access some elements with the array syntax
+		document. getElementsByTagName ("p")[0];
+		document. getElementsByTagName ("p")[2];
+}
+
+==================================================================================================
+-->

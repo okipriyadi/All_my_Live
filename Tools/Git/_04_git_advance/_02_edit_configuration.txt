@@ -1,0 +1,51 @@
+Basic configurations
+--------------------
+In the previous chapters, we saw that we can change a Git variable value using
+the git config command with the <variable.name> <value> syntax. In this
+paragraph, we will make use of the config command to vary some Git behaviors.
+
+Typos autocorrection
+--------------------
+So, let's try to fix an annoying question about the typing command named typos.
+I often find myself re-typing the same command two or more times; Git can help
+us with embedded autocorrection, but we first have to enable it. To enable it, you
+have to modify the help.autocorrection parameter, defining how many tenths of
+a second Git will wait before running the assumed command; so by giving a help.
+autocorrect 10 command, To abort the autocorrection, simply type Ctrl + C.
+===============================================
+	git config --global help.autocorrection 10
+===============================================
+
+Push default
+------------
+We already talked about the git push command and its default behavior. To avoid
+such annoying issues, it is a good practice to set a more convenient default behavior
+for this command.
+There are two ways we can do this. The first one is to set Git to ask to us
+the name of the branch we want to push every time, so a simple git push will
+have no effects. To obtain this, set push.default to nothing ,
+===============================================
+	git config --global push.default nothing
+===============================================
+As you can see, now Git pretends that you specify the target branch at every push.
+This may be too restrictive, but at least you can avoid common mistakes like pushing
+some personal local branches to the remote, generating confusion in the team.
+Another way to save yourself from this kind of mistake is to set the push.default
+parameter to simple , allowing Git to push only when there is a remote branch with
+the same name as that of the local one, as shown in the following screenshot:
+===============================================
+	git config --global push.default simple
+===============================================
+
+Defining the default editor
+-----------------------------
+Some people really don't like vim , even only for writing commit messages; if you are
+one of those people, there is good news for you in that you can change it instead by
+setting the core.default config parameter:
+=================================================
+	$ git config --global core.editor notepad
+=================================================
+Obviously you can set all text editors on the market. If you are a Windows user,
+remember that the full path of the editor has to be in the PATH environment variable;
+basically, if you can run your preferred editor typing its executable name in a DOS
+shell, you can use it even in a Bash shell with Git.

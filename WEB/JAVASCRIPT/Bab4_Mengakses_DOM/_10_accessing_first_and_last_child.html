@@ -1,0 +1,37 @@
+<ul id="nav">
+	<li>
+		<a href="/" id="home">Home</a></li>
+	<li>
+		<a href= "/about" id="about">About Us</a></li>
+	<li>
+		<a href="/contact" id="contact">Contact Us</a></li>
+</ul>
+
+<script>
+// travel to the first node and add the class
+document.getElementById("nav").firstChild.setAttribute("class", "first");
+
+// travel to the last node and add a class
+document.getElementById("nav").lastChild.setAttribute("class", "last");
+</script>
+
+
+<!--
+Hasilnya
+<ul id="nav">
+	<li class="first">
+		<a href="/" id="home">Home</a></li>
+	<li>
+		<a href= "/about" id="about">About Us</a></li>
+	<li class="last">
+		<a href="/contact" id="contact">Contact Us</a></li>
+</ul>
+
+Note
+These methods can be a little frustrating to work with because some browsers will insert a text
+node to maintain whitespace in your code. In the example we were using, this can cause a
+return of “#text” rather than the first node you’re expecting. These examples have been ideal-
+ized for readability, but in some cases you will want to remove the whitespace or adjust your
+targeting methods, Removing whitespace is a good idea for a lot of sites in production because
+it will make your overall page weight smaller and improve performance.
+-->

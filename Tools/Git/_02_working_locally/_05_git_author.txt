@@ -1,0 +1,23 @@
+Git is for collaborating, too. So, it is important that every author signs every commit
+it does to make it clear who did what.
+In every commit, you will find the author's friendly name and their e-mail to get in
+touch with them when necessary. If you are not happy with the actual author you
+see, change it with the git config command, as shown here:
+
+change username
+==================================================================
+		git config user.name <name>
+==================================================================
+
+change email
+==================================================================
+		git config user.email <email>
+==================================================================
+
+show the value
+==================================================================
+		git config <object>
+		ex: git config user.name 
+==================================================================
+
+

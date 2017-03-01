@@ -1,0 +1,65 @@
+The configuration options are stored in plain text files. The git config command
+is just a convenient tool to edit these files without the hassle of remembering where
+they are stored and opening them in a text editor.
+
+Configuration levels
+---------------------
+In Git we have three configuration levels which are:
+•	 System
+•	 User
+•	 Repository
+There are different configuration files for every different configuration level.
+You can basically set every parameter at every level according to your needs. If you
+set the same parameters at different levels, the lowest-level parameter hides the top
+level parameters; so, for example, if you set user.name at global level, it will hide the
+one eventually set up at system level; if you set it at repository level, it will hide the
+one specified at global level and the one eventually set up at system level.
+
+System level
+------------
+The system level contains system-wide configurations; if you edit the configuration
+at this level, every user and its repository will be affected.
+This configuration is stored in the gitconfig file usually located in:
+•	 Windows - C:\Program Files (x86)\Git\etc\gitconfig
+•	 Linux - /etc/gitconfig
+•	 Mac OS X - /usr/local/git/etc/gitconfig
+To edit the parameters at this level, you have to use the --system option; please
+note that it requires administrative privileges (for example, root permission on Linux
+and Mac OS X). Anyway, as a rule of thumb, the edit configuration at system level is
+discouraged in favor of per user configuration modification.
+
+Global level
+-----------------
+The global level contains user-wide configurations; if you edit the configuration at
+this level, every user's repository will be affected.
+This configuration is stored in the .gitconfig file usually located in:
+•	 Windows - C:\Users\<UserName>\.gitconfig
+•	 Linux - ~/.gitconfig
+•	 Mac OS X - ~/.gitconfig
+To edit the parameters at this level, you have to use the --global option.
+
+Repository level
+-----------------
+The repository level contains repository only configurations; if you edit the
+configuration at this level, only the repository in use will be affected.
+This configuration is stored in the config file located in the .git repository
+subfolder:
+•	 Windows - C:\<MyRepoFolder>\.git\config
+•	 Linux - ~/<MyRepoFolder>/.git/config
+•	 Mac OS X - ~/<MyRepoFolder>/.git/config
+To edit parameters at this level, you can use the --local option or simply avoid
+using any option as this is the default one.
+
+Listing configurations
+----------------------
+To get a list of all configurations currently in use, you can run the 
+=======================================+	
+	git config --list [option] 
+	eg1: git config --list
+	eg2: git config --list --local
+	eg3: git config --list --global
+	eg4: git config --list --system
+=======================================+
+if you are inside a repository, it will show all the configurations from
+repository to system level. To filter the list, append --system , --global , or --local
+options to obtain only the desired level configurations, as shown in the following

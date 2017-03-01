@@ -1,0 +1,17 @@
+If push is the verb used to define the upload part of the work, pull is the verb used
+to describe the action of downloading and applying remote changes. When you
+pull something from a remote, Git will retrieve all the remote commits made after
+your last pull from the branch you specify and merge them. Of course, the local
+destination branch is the branch you are in now (if you don't explicitly specify
+another one). So, finally, the pull command is the git fetch command plus the git
+merge command (in the future, you can skip git fetch and use only git pull to
+merge remote commits).
+
+===================================================================
+	git pull
+===================================================================
+Just to end this simple example, make some modifications to the new downloaded
+file and push the commit to GitHub:
+===================================================================
+	git push
+===================================================================

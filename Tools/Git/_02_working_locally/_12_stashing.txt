@@ -1,0 +1,30 @@
+Stashing
+Working of different features in parallel does not make a developer happy, but
+sometimes it happens. So, at a certain point, we have to break the work on a branch
+and switch to another one. However, sometimes, we have some modifications that
+are not ready to be committed, because they are partial, inconsistent, or even won't
+compile. In this situation, Git prevents you from switching to another branch. You
+can only switch from one branch to another if you are in a clean state:
+To quickly resolve this situation, we can stash the modifications, putting them into a
+sort of box, ready to be unboxed at a later time.
+
+Stashing is as simple as typing the git stash command. A default description
+will be added to your stash, and then modifications will be reverted to get back
+in a clean state:
+=========================================================================
+	git stash
+=========================================================================
+
+To list actual stashes, you can use the list subcommand:
+=========================================================================
+	git stash list
+=========================================================================
+
+Once you have done the other work, you can go back to the previous branch and
+apply the stash to get back to the previous "work in progress" situation:
+
+What we have seen is the most common scenario and most used approach, but
+stashing is a powerful Git tool. You can have multiple stashes, apply a stash to a
+different branch, or reverse apply a stash. You can even create a branch starting
+from a stash. You can learn more about this on your own.
+

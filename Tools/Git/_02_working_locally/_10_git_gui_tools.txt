@@ -1,0 +1,16 @@
+Git GUI is not my preferred GUI tool, but you have it for free when installing Git.
+So, let's use it for the moment.
+
+Open the C:\Repos\MyFirstRepo folder and
+right-click inside it. Choose Git GUI from the contextual menu. A dialog box will
+pop up.
+
+Go to Repository | Visualize All Branch History. A new window will open, and
+you will see the status of our current branches, as shown in the following screenshot:
+
+We do not have the time to go into all the details here. As you become more
+confident with Git fundamentals, you will learn little by little all the things you
+see in the preceding picture.
+If you don't want to leave the console to take a look, you could get a pretty output
+log even on the console. Try this articulated git log command:
+$git log --graph --decorate --pretty=oneline --abbrev-commit

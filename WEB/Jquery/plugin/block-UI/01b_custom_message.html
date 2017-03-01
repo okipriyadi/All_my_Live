@@ -1,0 +1,21 @@
+<html lang="en-US">
+<head>
+	<script type="text/javascript" src="../../jquery-1.9.0.js"></script>
+	<script type="text/javascript" src="jquery.blockUI.js"></script>
+</head>
+<body>
+	<input type="submit" value="Default Message" class="myButton" id="custommessage">
+</body>
+</html>
+
+<script>
+	$('#custommessage').click(function()
+			{
+				$.blockUI(
+				{
+					// message displayed when blocking (use null for no message)
+					message: '<h2><img src="progress_bar.gif" /> <br> Please Antosan heula...</h2>'
+				});
+				setTimeout($.unblockUI, 3000);
+			});
+</script>

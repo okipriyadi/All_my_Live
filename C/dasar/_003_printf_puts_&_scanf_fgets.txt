@@ -1,0 +1,65 @@
+-------
+PUTS
+-------
+hanya menampilkan huruf tanpa ada pemformatan sebelumnya
+================================================
+	puts("Halo");
+================================================
+
+
+-------
+PRINTF
+-------
+The printf() function is used to display formatted output. It
+replaces format characters with the values of variables, like this:
+================================================
+	printf("%s says the count is %i", "Ben", 21);
+================================================
+The first parameter will be inserted here as a string.
+The second parameter will be inserted here as an integer.
+Second parameter You can include as many parameters as you like when you call the printf()
+function, but make sure you have a matching % format character for each one.
+
+
+-------
+SCANF
+-------
+==============================
+	char card_name[3];
+	scanf("%2s", card_name);
+==============================
+pada contoh diatas masukan dua karakter ke dalam variabel card_name
+
+-------
+FGETS
+-------
+Just like the scanf() function, it takes a char pointer, but unlike the scanf() function, the fgets()
+function must be given a maximum length:
+==============================================
+	char food[5];	
+	printf("Enter favorite food: ");
+	fgets(food, sizeof(food), stdin);
+==============================================
+fgets parameters:
+parameter 1 : it takes a pointer to a buffer.
+parameter 2	: it takes a maximum size of the string (‘/0’ included).
+parameter 3 : stdin just means the data will be coming from the keyboard.
+
+perbedaan Scanf & fgets
+1. Do you limit the number of characters that a user can enter?
+scanf	: scanf() can limit the data entered, so long as you remember
+fgets	: to add the size to the format string. fgets() has a mandatory limit. Nothing gets past him.
+
+2. Can you be used to enter more than one field?
+scanf	: Yes! scanf() will not only allow you to enter more than one field, but it also allows you to enter
+		  structured data including the ability to specify what characters appear between fields.
+fgets	: Ouch! fgets() takes this one on the chin. fgets() allows you to enter just one string into a buffer.
+	      No other data types. Just strings. Just one buffer.
+
+3. If someone enters a string, can it contain spaces?
+scanf	: Oof ! scanf() gets hit badly by this one. When scanf() reads a string with the %s, it stops as soon
+	 	  as it hits a space. So if you want to enter more than one word, you either have to call it more than
+		  once, or use some fancy regular expression trick
+fgets	: No problem with spaces at all. fgets() can read the whole string every time
+
+

@@ -1,0 +1,62 @@
+<!--
+1. $("selektor tag")			: disebut selektor keturunan, berguna untuk memperoleh semua elemen tag yang terletak didalam selektor
+2. $("selektor > anak")			: disebut selektor anak, berguna untuk memperoleh semua elemen anak yang merupakan anak langsung dari selektor
+3. $("selektor1 + selektor2")	: disebut selektor saudara bersebelahan, berguna untuk memperoleh selektor2 yang merupakan saudara selektor1 yang terletak tepat setelah selektor satu
+4. $("selektor1 ~ selektor2")	: berguna untuk memperoleh semua elemen selektor2 yang merupakan saudara selektor1 
+5. $("A, B, C")					: menghasilkan semua elemen yang cocok dengan selktor A +selektroB + selektor C
+-->
+
+<!doctype html>
+<html>
+<head>
+	<title></title>
+	<script src="../jquery-1.9.0.js" >
+	</script>
+	<script>
+		$(document).ready(function(){
+			$(".manca-negara ~ li").css("border","solid 1px red")
+		})
+	</script>
+</head>
+<body>
+	Nama Negara:
+	<div class="border">
+		<div id="negara">
+			<ul>
+				<li class="dalam-negeri">Indonesia</li>
+				<li class="manca-negara">Thailand</li>
+				<li class="manca-negara">Belanda</li>
+				<li class="manca-negara">Teuing</li>
+			</ul>
+		</div>
+		Nama Kota:
+		<div id="kota">
+			<ul>
+				<li class="dalam-negeri">Jakarta</li>
+				<li class="manca-negara">Bangkok</li>
+				<li class="dalam-negari">Bandung</li>
+				<li class="dalam-negari">jogja</li>
+				<li class="dalam-negari">surabaya</li>
+			</ul>
+		</div>
+	Dalam kota:
+	
+	<div id="kota">
+		<ul>
+			<li class="dalam-kota">Cibinong</li>
+			<li class="dalam-kota">Blok M</li>
+			<li class="luar-kota">Cicendo</li>
+			<li class="luar-kota">Sukajadi</li>
+		</ul>
+	</div>
+	<div class="border">
+		saya <br>
+		kamu <br>
+		dan dia
+		<ul>
+			<li>tes</li>
+		</ul>
+	</div>
+	
+</body>
+</html>

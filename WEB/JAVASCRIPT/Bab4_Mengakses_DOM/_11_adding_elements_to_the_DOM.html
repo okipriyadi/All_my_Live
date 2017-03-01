@@ -1,0 +1,56 @@
+<!--
+creating and inserting a new element is generally a three-step process:
+1. Create the element. ===> createElement([tagname])
+2. Fill it with content (or leave it blank). ===> createTextNode()
+3. Put in the DOM. ===> appendChild() 
+
+First, we need to use the createElement([tagname]) method to create the element. This
+method takes one argument, which is the tag name of the element you want to create. When
+I say we create the element, it doesn’t actually exist anywhere until we put it in the DOM; it
+helps to perceive this method as thinking up an idea. The idea is floating around your head,
+but isn’t a physical thing until you put it on paper, tell someone, or build it.
+
+The second step is to add content to your element. You can do this right away, or you can
+do it later, but eventually the element will be filled with something; what good is an empty
+element? We use the createTextNode() method to do this. It takes one argument, which is a
+string of text that will be inserted into the element.
+
+The last step is picking a point in the DOM to insert your new element. We do this with the
+appendChild() method. This method takes one argument, which is the completed element
+you want to insert. Then, like magic, you’ve created a new element.
+
+We went over creating new nodes earlier in the chapter with the setAttribute() method
+because it also can dynamically create nodes in the DOM. Now let’s look at an example of
+creating a new element;.
+-->
+
+<body>
+	<div id="target-area">
+		<p id="tagline">Hello World!</p>
+	</div>
+</body>
+
+<script>
+// store the target area to a variable to keep things neat
+var targetArea = document.getElementById("target-area");
+
+// create our <p> element
+var p = document.createElement("p");
+
+// create a text node inside the <p>, note that we're using a variable "p" here
+var snippet = p.createTextNode("this was a generated paragraph");
+
+// insert our generated paragraph into the DOM
+targetArea.appendChild(snippet);
+</script>
+
+
+<!--
+Hasilnya : 
+<body>
+	<div id="target-area">
+	<p id="tagline">Hello World!</p>
+	<p>this was a generated paragraph</p>
+	</div>
+</body>
+-->

@@ -1,0 +1,27 @@
+As we have seen, merging branches is not a difficult task. However, in
+real-life scenarios, things are not that easy. We have conflicts, modifications
+on both branches, and other weird things to fight. In this section, we will take
+a look at some of them. However, first, remember one important thing: it needs
+a little bit of discipline to make the most of Git.
+You have to avoid at least two things:
+•	 Working hard on the same files on different branches
+•	 Rarely merging branches
+Edit collisions
+This is the most common kind of conflict: someone edited the same line in the
+same file on different branches, so Git can't auto merge them for you. When this
+happens, Git writes special conflict markers to the affected areas of the file. At this
+point, we have to manually solve the situation, editing that area to fit our needs.
+Let's try this by performing the following steps:
+1.	 Open your repository located in C:\Repos\MyRepos .
+2.	 Switch to the NewWork branch and edit NewFile.txt by modifying
+the first line Added some text to the existing NewFile in Text has
+been modified .
+3.	 Add and commit the modification.
+4.	 Switch back to master and merge the NewWork branch.
+
+As you can see, Git highlighted the conflict. A conflict-marked area begins with
+<<<<<<< and ends with >>>>>>> . The two conflicting blocks themselves are divided
+by a sequence of ======= . To solve the conflict, you have to manually edit the file,
+deciding what to maintain, edit, or delete. After that, remove the conflict markers
+and commit changes to mark the conflict as resolved.
+

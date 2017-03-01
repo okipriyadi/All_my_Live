@@ -1,0 +1,36 @@
+<!--
+method ini terbilang baru dijavascript, cek browser berikut yang mendukung getElementsByClassName
+
+Internet Explorer 9.0 & up
+Firefox 3.0 & up
+Chrome 4.0 & up
+Opera 9.5 & up
+Safari 3.1 & up
+
+-->
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8 ">
+<title>getElementsByTagname Example</title>
+</head>
+<body>
+	<h1>Using getElementsByTagname</h1>
+	<p class="dropcap huge">Content paragraph</p>
+	<p id="e" class="dropcap">Content <span class="huge">paragraph</span></p>
+	<p class="dropcap">Content paragraph</p>
+</body>
+</html>
+
+
+<script>
+// returns all elements with a class of dropcap
+document. getElementsByClassName ("dropcap");
+// returns all elements with both "dropcap" and "huge" classes (1 in our example)
+document. getElementsByClassName ("dropcap huge");
+/* returns all elements classed with "huge" that are inside elements ID'd with "e" 
+(1 element in our example – the span)*/
+document.getElementsById("e").getElementsByClassName("huge");
+</script>

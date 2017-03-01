@@ -1,0 +1,20 @@
+A repository is made of commits, as a life is made of days. Every time you commit
+something, you write a piece of the history.
+
+The past is represented by the previous commits that we did
+The HEAD pointer is the reference to the last commit we did
+ 
+The present is where we work. When a previous commit is done, it becomes part of the past
+We have a HEAD reference that points out where we came from (the last commit).
+Resetting to HEAD as we did earlier is a manner of going back in this initial state,
+where there are no modifications yet. Then, we have the working directory. This
+directory collects files added to the repository in the previous commits. Now, it is in
+the untouched state. Within this place, we do our work in files and folders, adding,
+removing, or modifying them. Our work remains in the working directory until we decide to put it in the next
+commit we will perform. Using the git add command, we add what we want to
+promote to the next commit, marking them into the index, as shown in this diagram:
+
+
+1. Using the git add command, we add what we want to promote to the next commit, marking them into the index.
+2. With git rm --cached <file or folder> , you can unstage a file by removing it from the index.
+3. With git reset --hard HEAD , we will go back to the initial state, losing all the changes we made in the working directory.

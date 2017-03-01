@@ -1,0 +1,6 @@
+komentar untuk multiline 
+================================+
+	/*ajsdsndasndasd
+	asdasdaklsd
+	aklsmdk*/
+================================+

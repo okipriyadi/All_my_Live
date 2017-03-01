@@ -1,0 +1,38 @@
+<!--
+With the release of the HTML5 specification came a new flood of JavaScript APIs as well. 
+It was clear we want to use CSS selectors in JavaScript, so out came two new methods: 
+1. querySelector() and 
+2. querySelectorAll().
+Both methods can take selectors in CSS format. The difference between the two is that query-
+SelectorAll() will return a NodeList (the same way getElementsByClassName() and
+getElementsByTagname() do) and querySelector() will return only the first element that it
+comes across. Let’s look at the following HTML in Listing 4.5 .
+-->
+
+<body>
+	<div id="header >
+		<h1>Using querySelector</h1>
+	</div>
+	<p class="dropcap huge">Content paragraph</p>
+	<p class="dropcap">Content 
+		<span class="huge">paragraph</span></p>
+	<p class="dropcap">Content paragraph</p>
+</body>
+
+<script>
+// get the header ID element
+document.querySelector("#header");
+
+// get the first element with a dropcap class
+document.querySelector(".dropcap");
+
+// get all the paragraphs with a "dropcap" class – produces a nodeList
+document.querySelectorAll(".dropcap");
+
+// get all elements with a class of "dropcap" OR "huge"
+document.querySelectorAll(".dropcap, .huge");
+
+// get all paragraphs that have a class
+document.querySelectorAll("p[class]");
+</script>
+

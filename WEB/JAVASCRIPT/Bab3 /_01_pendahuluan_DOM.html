@@ -1,0 +1,51 @@
+<!--
+DOM = Document Object Model.
+At its simplest level, the DOM is an outline of the HTML document you are accessing. 
+It functions in much the same way that an outline for any document would function—a book, an
+article, a grocery list, anything with structure. There are top-level items, items nested under
+them, and items grouped in chunks (like pages in a chapter and chapters in a book). These
+items are called nodes and every node in the DOM has a relationship to its surrounding nodes.
+These relationships, just like in a real-life family, are:
+
+1. Parent
+2. Child
+3. Sibling
+
+Parents
+A parent node is anything that contains other nodes. Is that a little too vague(tidak jelas)? 
+For example, a <body> element is the parent of anything contained within it; div tags, 
+table elements, headings, everything nested inside counts as a child. The <body> element can 
+certainly contain other parents, but to the <body> , they will always be children.
+
+exampe below shows a simple unordered list and keeping with the family theme, they are all
+members of my family. In this example, the <UL> is the parent to all the list items because they
+are all contained within it.
+-->
+
+<!-- the <ul> is the parent element to all the list items -->
+<!-- the <li>s are all children (child elements) of the <ul> -->
+<!-- each <LI> is a sibling of the other list items, because they're on the same level -->
+<ul>
+	<li>Joan</li>
+	<li>Charlie</li>
+	<li>Peter</li>
+	<li>Christine</li>
+	<li>Anna</li>
+	<li>Tim</li>
+</ul>
+
+<!--
+Children
+In the DOM, children are positioned inside parent nodes. exmple above you can see that the
+parent <ul> is wrapping all children (child nodes). It’s like a parent giving all the children a
+big hug.
+
+Siblings
+Siblings, like in real life, are on the same level (without the inherent rivalry). If a parent has
+multiple children, they are referred to as siblings . In example above you can see that all the list
+items underneath the parent <ul> are on the same level, making them children of the <ul> ,
+but also siblings to each other. They can be a child, parent, and sibling all at the same time if
+they have children.
+-->
+
+

@@ -1,0 +1,27 @@
+Looking at the current branches
+==========================================================++
+	$ git branch
+==========================================================++
+The branch is highlighted with a star and green font
+
+Creating a new branch
+==========================================================++
+	$ git branch [nama_branch_baru]
+==========================================================++
+
+Switching from branch to branch
+==========================================================++
+	$ git checkout [nama_branch]
+==========================================================++
+
+Switching to check out the previous branch you were in
+==========================================================++
+	$ git checkout –
+==========================================================++
+
+Merging Branch 
+==========================================================++
+	$ git checkout <branch yang dituju>;
+	$ git merge <branch source>
+==========================================================++
+

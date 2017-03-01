@@ -1,0 +1,20 @@
+<!--
+untuk mengubah text node digunnakan method innerHTML 
+
+In this example, we want to target the text node and change it to “hello world”. This content
+could come from anywhere, such as an Ajax call, or it can be hard-coded in, like in the
+example from Listing 4.7.1 .
+-->
+<body>
+	<div id="target-area">
+		<p>This is our text.</p>
+	</div>
+</body>
+
+<script>
+// targeting the text node
+document.getElementById("target-area").innerHTML ;
+
+// changing the content in the text node – you can jump straight to this.
+document.getElementById("target-area").innerHTML = "<p>hello world</p>";
+</script>

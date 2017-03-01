@@ -1,0 +1,25 @@
+we have created an empty folder and initialized a new repository using the git init command. Starting
+from now, we will call this folder the working directory. A folder that contains an
+initialized Git repository is a working directory. You can move the working directory
+around your file system without losing or corrupting your repository.
+
+Within the working directory, you also learned that there is a .git directory. Let's
+call it the git directory from now on. In the git directory there are files and folders
+that compose our repository. Thanks to this, we can track the file status, configure
+the repository, and so on.
+
+When you create or copy a new file in the working directory, the first state of the
+file is untracked. This means that Git sees that there is something new, but it won't
+take care of it (it would not track the new file). If you want to include the file in
+your repository, you have to add it using the add command. Once it is added, the
+state of the file becomes unmodified. It means that the file is new (Git says it is
+unmodified because it never tracked changes earlier) and ready to be committed, or
+it has reached the staging area (also called index). If you modify a file that is already
+added to the index, it changes its status to modified.
+
+FILE STATUS LIFE CYCLE
+***************************************************************************
+Untrack			Unmodified			modified			staged
+ | add the file --> | edit the file --> | stage the file-->|
+  					| <-----------------------------------	commit
+***************************************************************************

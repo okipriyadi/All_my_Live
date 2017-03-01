@@ -1,0 +1,11 @@
+This trick is for people who don't double-check what they're writing. If you pressed
+the Enter key too early, there's a way to modify the last commit message, using the
+git commit command with the --amend option:
+===================================================+
+	$ git commit --amend -m "New commit message"
+===================================================+
+Please note that with the --amend option, you are actually redoing the commit, which
+will have a new hash; if you already pushed the previous commit, changing the last
+commit is not recommended; rather, it is deplorable and you will get in trouble.
+
+

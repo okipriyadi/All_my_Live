@@ -1,0 +1,28 @@
+Now, we have a remote repository, so it's time to learn how to hook(menghubungkan) it locally. For
+this, Git provides the git clone command Using this command is quite simple. All we need to know is the URL of the repository
+to clone.
+
+To copy the URL, you can simply click on the clipboard button on the right-hand
+side of the textbox.
+So, let's try to follow these steps together:
+1.	 Go to the local root folder, C:\Repos , for the repositories.
+2.	 Open a Bash shell within it.
+3.	 Type git clone https://github.com/fsantacroce/Cookbook.git .
+==========================================================
+	git clone [url_xxx.git]
+==========================================================
+
+Uploading modifications to remotes
+So, let's try to edit the README.md file and upload modifications to GitHub:
+1.	 Edit the README.md file using your preferred editor. You can add, for example, a new sentence.
+2.	 Add it to the index and then commit.
+3.	 Put your commit on the remote repository using the git push command.
+==========================================================
+	git push
+==========================================================
+
+The git push command allows you to upload local work to a configured remote
+location, in this case, a remote GitHub repository. There are a few things we have to
+know about pushing. We can begin to understand the message Git gave us just after
+we run the git push command.
+

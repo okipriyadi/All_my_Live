@@ -1,0 +1,25 @@
+<ul id="nav">
+	<li><a href="/" id="home">Home</a></li>
+	<li><a href="/about" id="about">About Us</a></li>
+	<li><a href="/contact" id="contact">Contact Us</a></li>
+</ul>
+
+<script>
+// get "about" parent, then its previous sibling and apply a class
+document.getElementById("about").previousSibling.setAttribute("class", "previous");
+
+// get "about" parent, then its next sibling and apply a class
+document.getElementById("about").nextSibling.setAttribute("class", "next");
+</script>
+
+<!--
+Hasilnya 
+<ul id="nav">
+	<li>
+		<a href="/" id="home" class=" previous">Home</a></li>
+	<li> 	
+		<a href="/about" id="about">About Us</a></li>
+	<li>
+		<a href="/contact" id="contact" class=" next" >Contact Us</a></li>
+</ul>
+-->

@@ -1,0 +1,20 @@
+<script type="text/javascript" src="../../jquery-1.9.0.js"></script>
+<script type="text/javascript" src="jquery.blockUI.js"></script>
+
+<p>
+	<button id="Button" class="myButton">overlay</button>
+</p>
+
+<script>
+	$('#Button').click(function()
+		{
+	    	$.blockUI({ 
+	            fadeIn: 1000, 
+	            timeout:   2000, 
+	            onBlock: function() { 
+	                alert('Page is now blocked; fadeIn complete'); 
+            } 
+        });  
+         
+	    });
+</script>

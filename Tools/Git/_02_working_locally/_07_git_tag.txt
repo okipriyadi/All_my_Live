@@ -1,0 +1,13 @@
+--------------------------------------------
+Highlighting an important commit – Git tags
+--------------------------------------------
+
+We said that commits have an ID and a lot of other useful information bundled with
+binary blobs of files included. Sometimes, we want to mark a commit with a tag to
+place a milestone in our repository. You can achieve this by simply using the git
+tag –a <tag name> command, using –m to type the mandatory message:
+====================================================
+ 	git tag –a MyTagName –m "This is my first tag"
+====================================================
+Tags will become useful in the future to keep track of important things such as a new
+software release, particular bug fixes, or whatever you want to put on evidence.

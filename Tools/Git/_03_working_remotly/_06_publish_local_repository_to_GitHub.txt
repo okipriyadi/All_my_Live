@@ -1,0 +1,28 @@
+Often, you will find yourself needing to put your local repository in a shared place
+where someone else can look at your work. In this section, we will learn how
+to achieve this.
+Create a new local repository to publish by following these simple steps:
+1.	 Go to our C:\Repos folder.
+2.	 Create a new HelloWorld folder.
+3.	 Init a new repository, as we did in Chapter 1, Getting Started with Git.
+4.	 Add a new README.md file and commit it.
+Now, create the GitHub repository as we did previously. This time, leave it empty.
+Don't initialize it with a README.md file; we already have one in our local repository:
+At this point, we are ready to publish our local repository on GitHub or, more
+specifically, add a remote to it.
+
+Adding a remote to a local repository
+---------------------------------------
+To publish our HelloWorld repository, we simply have to add its first remote.
+Adding a remote is quite simple: Use the command git remote add origin
+<remote-repository-url>
+====================================================================================
+	git remote add origin <remote-repository-url>
+	eg: git remote add origin https://github.com/fsantacroce/HelloWorld.git
+====================================================================================
+
+Pushing a local branch to a remote repository
+After adding a remote, push your local changes to the remote using 
+====================================================================================
+	git push -u origin master :
+====================================================================================
