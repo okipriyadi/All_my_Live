@@ -1,0 +1,16 @@
+object.field = new value
+object.save()
+
+ex:
+	post.title = 'New title'
+	post.save()
+	
+save akan mengaupdate seluruh field (bukan hanya field title yg kita ubah saja)
+
+Publisher.objects.filter(id=52).update(name='Apress Publishing')
+cara berikut lebih efisien
+
+>>> b = Blog.objects.get(pk=1)
+
+# Change every Entry so that it belongs to this Blog.
+>>> Entry.objects.all().update(blog=b)
