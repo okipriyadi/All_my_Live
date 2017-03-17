@@ -81,7 +81,8 @@ b. Socket Datagram atau SOCK_DGRAM
     scopeid represents sin6_flowinfo and sin6_scope_id member in struct sockaddr_in6 in C
 
 Sekilas Tentang Socket, TCP Dan UDP
-Pengertian socket adalah interface pada jaringan yang menjadi titik komunikasi antarmesin pada Internet Protocol, dan tentunya tanpa komunikasi ini, tidak akan ada pertukaran data dan informasi jaringan.
+Pengertian socket adalah interface pada jaringan yang menjadi titik komunikasi antarmesin pada Internet Protocol, 
+dan tentunya tanpa komunikasi ini, tidak akan ada pertukaran data dan informasi jaringan.
 Socket terdiri dari elemen-elemen utama sebagai berikut:
 1. Protokol.
 2. Local IP.

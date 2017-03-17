@@ -1,0 +1,47 @@
+Command	 	go	run
+========================	
+Command go run digunakan untuk eksekusi	file program (file ber-ekstensi	 .go).	Cara
+penggunaannya	adalah	dengan	menuliskan	command	tersebut diikut nama file.
+Berikut	adalah	contoh	penerapan	 	go	run	 	untuk	eksekusi	file	program	 	bab5.go	 	yang
+tersimpan	di	path	 	$GOPATH/src/belajar-golang	 .
+$	cd	$GOPATH/src/belajar-golang
+$	go	run	bab5.go
+
+
+Command	 	go	build	
+=======================
+Command	ini	digunakan	untuk	mengkompilasi	file	program.
+Sebenarnya	ketika	eksekusi	program	menggunakan	 	go	run	 ,	terjadi	proses	kompilasi	juga,
+hanya	saja	file	hasil	kompilasi	akan	disimpan	pada	folder	temporary	untuk	selanjutnya
+langsung	dieksekusi.
+Berbeda	dengan	 	go	build	 ,	command	ini	menghasilkan	file	executable	pada	folder	yang
+sedang	aktif.	Contohnya	bisa	dilihat	pada	kode	berikut.
+
+
+
+Command go	install
+=====================	
+Command	 	go	install	 	memiliki	fungsi	yang	sama	dengan	 	go	build	 ,	hanya	saja	setelah
+proses	kompilasi	selesai,	dilanjutkan	ke	proses	instalasi	program	yang	bersangkutan.
+Target	eksekusi	harus	berupa	folder	proyek	(bukan	file	 	.go	 ),	dan	path	folder	tersebut
+dituliskan	relatif	terhadap	 	$GOPATH/src	 .	Contoh:
+$	go	install	github.com/novalagung/godong
+	go	install	 	menghasilkan	output	berbeda	untuk	package	 	main	 	dan	non-main.
+Pada	package	non-main,	menghasilkan	file	berekstensi	 	.a	 	tersimpan	dalam	folder
+	$GOPATH/pkg	
+Pada	package	main,	menghasilkan	file	executable	tersimpan	dalam	folder	 	$GOPATH/bin	
+
+
+Command	go	get	
+=====================
+Command	ini	berbeda	dengan	command-command	yang	sudah	dibahas	di	atas.	 	go	get	
+digunakan	untuk	men-download	package.	Sebagai	contoh	saya	ingin	men-download
+package	mgo.
+$	go	get	gopkg.in/mgo.v2
+$	ls	$GOPATH/src/gopkg.in/mgo.v2
+
+gopkg.in/mgo.v2	adalah	alamat	url	package	mgo.	Package	yang	sudah	ter-download	akan
+tersimpan	pada	 	$GOPATH/src	 	dengan	struktur	folder	sesuai	dengan	url	package-nya.
+Sebagai	contoh,	package	mgo	di	atas	tersimpan	di	 	$GOPATH/src/gopkg.in/mgo.v2	 .
+
+

@@ -1,0 +1,13 @@
+fmt.Printf("halo	john	wick!\n")						
+fmt.Printf("halo	%s	%s!\n",	firstName,	lastName)
+fmt.Println("halo",	firstName,	lastName	+	"!")
+
+
+
+
+/*
+Fungsi	 	fmt.Printf()	 	tidak	menghasilkan	baris	baru	di	akhir	text,	oleh	karena	itu
+digunakanlah	literal	 	\n	 	untuk	memunculkan	baris	baru	di	akhir.	Hal	ini	sangat	berbeda	jika
+dibandingkan	dengan	fungsi	 	fmt.Println()	 	yang	secara	otomatis	menghasilkan	end	line
+(baris	baru)	di	akhir.
+*/

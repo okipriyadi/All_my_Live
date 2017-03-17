@@ -1,0 +1,32 @@
+1.	 Download	archive	berikut,	pilih	sesuai	jenis	bit	komputer	anda.
+32bit	=>	go1.7.lin*x-386.tar.gz
+64bit	=>	go1.7.lin*x-amd64.tar.gz
+
+
+1.	 Buka	terminal,	ekstrak	archive	tersebut	ke	 	/usr/local	 .	
+     Setelah	itu	export	path-nya.
+     Gunakan	command	di	bawah	ini	untuk	melakukan	hal	tersebut.
+	 $	tar	zxvf	go1.7.lin*x-....tar.gz	-C	/usr/local
+	 $	export	PATH=$PATH:/usr/local/go/bin
+2.	 Selanjutnya,	eksekusi	perintah	berikut	untuk	mengetes	apakah	Golang	sudah	terinstal
+     dengan	benar.
+	  $	go	version
+3.	 Jika	output	command	di	atas	adalah	versi	Golang	yang	di-instal,	maka	instalasi
+berhasil.
+
+
+GOPATH	Dan	Workspace
+Setelah	Golang	berhasil	di-instal,	ada	hal	yang	perlu	disiapkan	sebelum	bisa	masuk	ke	sesi
+pembuatan	aplikasi,	yaitu	setup	workspace	untuk	proyek-proyek	yang	akan	dibuat.	Dan	di
+bab	ini	kita	akan	belajar	bagaimana	caranya.
+Variabel	 	GOPATH	
+GOPATH	adalah	variabel	yang	digunakan	oleh	Golang	sebagai	rujukan	lokasi	dimana
+semua	folder	proyek	disimpan.	Gopath	berisikian	3	buah	sub	folder:	 	src	 ,	 	bin	 ,	dan	 	pkg	 .
+Proyek	di	Golang	harus	ditempatkan	pada	path	 	$GOPATH/src	 .	Sebagai	contoh	kita	ingin
+membuat	proyek	dengan	nama	 	belajar	 ,	maka	harus	dibuatkan	sebuah	folder	dengan
+nama	 	belajar	 	ditempatkan	dalam	 	src	 	( 	$GOPATH/src/belajar	 ).	Nantinya	semua	file	untuk
+keperluan	proyek	yang	bersangkutan	ditempatkan	disana.
+Path	separator	yang	digunakan	sebagai	contoh	di	buku	ini	adalah	slash	 	/	 .	Khusus
+pengguna	Wind*ws,	path	separator	adalah	backslah	 	\	 .
+
+

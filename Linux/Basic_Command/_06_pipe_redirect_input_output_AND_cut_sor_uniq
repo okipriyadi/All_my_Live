@@ -4,15 +4,37 @@ prog1 2> namafile	: mirip dengan prog1 > namafile, tapi hanya stderror yang akan
 prog1 >> namafile	: membuat output pada prog1 disimpan kedalam sebuah file, jika file sudah ada, maka output akan ditambahkan dibaris terakhir (TIDAK MEREPLACE) 
 prog1 | prog2		: membuat output prog1 menjadi input bagi prog2
 prog! && prog2		: keduanya akan dieksekusi kalau kondisi dua program tersebut benar ex ls -al && echo "hai"
+cut -d: -f2			: -d = delimiter, dalam contoh ini delimiternya adalah ":"(double colon), -f=field, dalam hal ini kita memilih kolom ke dua  memotong sebuah text 
+sort -bf			: b=ignore blank (spasi mereun),f=fold lower (incasesensitive) 
+uniq				: menampilkan tanpa duplikasi
+grep				: mencari patern
+grep [patern] file/folder : mencari di isi file / folder dengan pattern yang sesuai
 
+
+ex:$ grep nahakitu ./*
 ex:
-echo "hallo woel"
 
-
-
-
-
-
+$ cat file.txt
+dave:we
+user:love
+someone:you
+someone:you
+$ cat file.txt | cut -d: -f2 
+we
+love
+you
+you
+$ cat file.txt | sort -bf
+dave:we
+someone:you
+someone:you
+user:love
+$ cat file.txt | uniq
+dave:we
+user:love
+someone:you
+$ cat file.txt | grep user
+user:love
 
 keterangan: 
 setiap program mempunyai input dan output, pada contoh diatas input masuk ke program1 kemudian output 
