@@ -1,0 +1,17 @@
+ul{
+	list-style-type: square;
+}
+
+/*
+ul options:
+circle=bulat kosong
+disc =bulat isi
+square =kotak
+
+ol options:
+decimal = 1,2,3,4 ...
+decimal-leading-zero = 01,02,03,04 ...
+lower-roman = i, ii, iii, iv ...
+lower-alpha / lower latin = a,b,c,d
+upper-alpha / upper latin = A, B, C, D 
+*/

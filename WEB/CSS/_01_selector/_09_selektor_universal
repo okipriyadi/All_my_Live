@@ -1,0 +1,19 @@
+</html>
+<head>
+<title></title>
+<style type="text/css">
+	* {
+		color:red
+	}
+	<!-- semua teks dalam  elemen akan berwarna merah -->
+</style>
+</head>
+<body>
+	<p>ini paragraf anak</p>
+	<div class="warna-1">
+	<div class="warna-2">
+		ini paragraf cucu
+	</div>
+	<div class="warna-3">
+</body>
+</html>

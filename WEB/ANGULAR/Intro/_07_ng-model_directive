@@ -1,0 +1,27 @@
+<!--
+With the ng-model directive you can bind the value of an input field to a variable created in AngularJS.
+-->
+
+<div ng-app="myApp" ng-controller="myCtrl">
+    Name: <input ng-model="name">
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.name = "John Doe";
+});
+</script>
+
+<!--
+Validate User Input
+The ng-model directive can provide type validation for application data (number, e-mail, required):
+
+<form ng-app="" name="myForm">
+    Email:
+    <input type="email" name="myAddress" ng-model="text">
+    <span ng-show="myForm.myAddress.$error.email">Not a valid e-mail address</span>
+</form>
+
+In the example above, the span will be displayed only if the expression in the ng-show attribute returns true.
+-->

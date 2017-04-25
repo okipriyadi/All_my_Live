@@ -1,0 +1,56 @@
+In AngularJS, a service is a function, or object, that is available for, and limited to, your AngularJS application.
+
+The $http Service
+===================
+The $http service is one of the most common used services in AngularJS applications. The service makes a request to the server, and lets your application handle the response.
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $http) {
+    $http.get("welcome.htm").then(function (response) {
+        $scope.myWelcome = response.data;
+    });
+});
+
+The $timeout Service
+====================
+The $timeout service is AngularJS' version of the window.setTimeout function.
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $timeout) {
+    $scope.myHeader = "Hello World!";
+    $timeout(function () {
+        $scope.myHeader = "How are you today?";
+    }, 2000);
+});
+
+
+The $interval Service
+======================
+The $interval service is AngularJS' version of the window.setInterval function.
+
+<div ng-app="myApp" ng-controller="myCtrl"> 
+<p>The time is:</p>
+<h1>{{theTime}}</h1>
+</div>
+<p>The $interval service runs a function every specified millisecond.</p>
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $interval) {
+  $scope.theTime = new Date().toLocaleTimeString();
+  $interval(function () {
+      $scope.theTime = new Date().toLocaleTimeString();
+  }, 1000);
+});
+</script>
+
+
+Create Own Service
+=========================
+app.service('hexafy', function() {
+    this.myFunc = function (x) {
+        return x.toString(16);
+    }
+});
+
+
+app.controller('myCtrl', function($scope, hexafy) {
+    $scope.hex = hexafy.myFunc(255);
+});

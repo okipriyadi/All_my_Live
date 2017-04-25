@@ -1,0 +1,4 @@
+Three ways to bind data :
+1. ng-bind 			: <p ng-bind="firstname"></p>
+2. double braces 	: <p>First name: {{firstname}}</p>
+3. ng-model			: <input ng-model="firstname">	

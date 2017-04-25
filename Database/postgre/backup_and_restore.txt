@@ -11,15 +11,6 @@ Backup per database
 
 
 
-
-
-
-
-
-
-
-
-
 Salah satu cara mekanisme membackup database PostgreSQL adalah dengan menjalankan skrip pg_dump atau pg_dumpall 
 yang menghasil file SQL dump.
 

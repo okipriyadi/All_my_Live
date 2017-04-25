@@ -1,0 +1,17 @@
+1. masuk ke user postgres 
+	sudo su postgres
+2. setalh masuk user postgres ketikan perintah
+    pg_dump -t <old_table> <old_database> -f <nama_file_output_yg_akan_disimpan>
+    ex : pg_dump -t  inventory_stocktransaction vcm_saas_dns -f hasil_copy_table.sql
+3. masuk ke database baru, jika table yang dimaksud sudah ada, maka delete terlebih dahulu
+	ex : 
+	1. sudo -u postgres psql
+	2. \c vcm_saas_dns
+	3. drop table inventory_stocktransaction
+4. kembali ke user postgres
+5. copy table
+	ex: psql vcm_saas_dns  < /home/dnadmin/pg_copy_table.sql	
+
+	
+
+	    

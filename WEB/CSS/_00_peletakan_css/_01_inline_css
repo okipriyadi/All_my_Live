@@ -1,0 +1,3 @@
+style diletakan dalam element hml berada pada atribut style. 
+ex:
+<div style="backgorund-dolor:blue; color: red;">

@@ -1,0 +1,19 @@
+</html>
+<head>
+<title></title>
+<style type="text/css">
+	body > p {
+		background-color:red;
+		color:white;
+	}
+</style>
+</head>
+<body>
+	<p>ini paragraf anak</p>
+	<div>
+		<p>
+			ini paragraf cucu
+		</p>
+	</div>
+</body>
+</html>

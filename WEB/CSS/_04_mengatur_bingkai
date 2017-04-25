@@ -1,0 +1,14 @@
+4 boreder:
+border-left 	: 2px
+border-right 	: 2px
+border-top		: 6px
+border-bottom	: 2px
+
+Bentuk bingkai:
+border-style	: dashed/dotted/double/groove/hidden/inset/none/outset/ridge/solid
+
+warna bingkai:
+border-left-color	: gray;
+border-right-color	: gray;
+border-bottom-color	: gray;
+border-top-color	: gray; 

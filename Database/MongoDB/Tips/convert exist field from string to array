@@ -1,0 +1,3 @@
+db.|nama table|.find().snapshot().forEach(function(x){ x.|nama field| = [x.token]; db.|nama table|.save(x)});
+ex: 
+	db.Survey.find().snapshot().forEach(function(x){ x.token = [x.token]; db.Survey.save(x)});

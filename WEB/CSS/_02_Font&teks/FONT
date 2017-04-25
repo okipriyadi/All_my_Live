@@ -1,0 +1,63 @@
+color			: red;
+font-size		: 500%;
+font-variant	: small-caps;
+font-weight		: bold;
+font-style		: italic;
+text-align		: [center/left/right/justify]  /*perataan text horizontal*/
+vertical-align	: [baseline/middle/sub/super/xx%]  /*perataan text vetical*/
+line_height		: 0.4em /*jarak anatar baris*/
+letter-spacing	: 0.4em /*jarak anatar huruf*/
+word-spacing	: 0.4em /*jarak anatar kata*/
+padding-top		: 1 cm /*jarak terhadap batas atas*/
+padding-bottom	: /*jarak terhadap batas bawah*/
+padding-left	: /*jarak terhadap batas kiri*/
+padding-right	: /*jarak terhadap batas kanan*/
+margin-top		:/*jarak terhadap batas kanan parentnya*/
+margin-bottom	:/*jarak terhadap batas kanan parentnya*/
+margin-left		:/*jarak terhadap batas kanan parentnya*/
+margin-right	:/*jarak terhadap batas kanan parentnya*/
+text-transform	: capitalize/lowercase/uppercase
+text-indent		: 50px /*jarak indentansi*/
+text-decorations: line-through(dicoret)/overline(garis atas)/underline(garis bawah)/blink	
+
+
+
+
+trik hanging
+==========================
+text-indent= -30px ;
+padding-left = 30px ;
+==========================
+
+trik pangkat dan kimia
+==========================
+.superscript {vertical-align: super};
+.subscript {vertical-align:-40px}
+==========================
+
+
+baseline 	: sesuai default text dalam elemen
+middle		: ditengah
+sub			: lebih rendah
+supper		: lebih tinggi 
+bottom		: bagian bawah
+top			: bagian atas
+untuk satuan ukuran liat file ukuran
+
+FONT
+pt 		: point 1pt = 1/72 inci
+px		: pixel 1px=1 titik pada layar komputer
+em 		: 1 em artinya ukuran 1 kali dari yg sekarang, 2em artinya: 2 kali dari font yg sekarang
+% 		: persentase. bersifat relatif dengan ukuran font sekarang
+in		: 
+mm
+cm
+ex
+
+medium 
+small
+x-small
+xx-small
+large
+x-large
+xx-large

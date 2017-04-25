@@ -1,0 +1,15 @@
+dibuat di halaman terpisah dan dihubungkan dengan html denga cara:
+
+</html>
+<head>
+<title></title>
+<link rel="stylesheet" type:"text/css" href="lokasi_dan_nama_file_css_eksternal">
+</head>
+<body>
+	<div class="merah"></div>
+	<div class="merah khusus"></div>
+	<div class="biru"></div>
+	<div class="merah"></div>
+	<div class="biru"></div>
+</body>
+</html>

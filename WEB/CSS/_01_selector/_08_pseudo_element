@@ -1,0 +1,21 @@
+</html>
+<head>
+<title></title>
+<style type="text/css">
+	p:first-letter{
+		color:red
+	}
+</style>
+</head>
+<body>
+	<p>ini paragraf anak ini paragraf anakini paragraf anakini paragraf anakini paragraf anakini paragraf anak
+	ini paragraf anakini paragraf anakini paragraf anakini paragraf anakini paragraf anakini paragraf anak
+	ini paragraf anakini paragraf anakini paragraf anakini paragraf anakini paragraf anak
+	ini paragraf anakini paragraf anakini paragraf anak
+	</p>
+	
+</body>
+</html>
+
+NOTE:
+ada juga first-line

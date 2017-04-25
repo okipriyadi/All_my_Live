@@ -1,0 +1,26 @@
+#menuPencari a:link,#menuPencari a:visited {
+	display : block;
+	color: navy;
+	text-decoration: none; /*biar underline pada linknya hilang*/
+	padding : 4px, 10px, 4px, 10px; /*biar ada jarak antar elemen*/
+	background-image : url(asd.jpg);
+	background-repeat: no-repeat;
+	width: 180px;
+	height: 60 px;
+}
+
+#menuPencari a:hover {
+	background-image : url(bnm.jpg);
+	background-repeat: no-repeat;
+}
+
+#menuPencari ul {
+	margin:0px;
+	padding: 0px;
+	list-stye-type: none;
+}
+
+#menuPencari li {
+	display: inline;
+	background-color: blue;
+}

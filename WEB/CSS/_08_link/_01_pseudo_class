@@ -1,0 +1,14 @@
+<head>
+<title></title>
+<style type="text/css">
+	a:link {color:blue;}/* link yg belum pernah di klik*/
+	a:hover {background-color:blue;
+			 color:white;
+			}/* berubah saat mouse berada diatasnya */
+	a:visited {color:green} /*link yang pernah diklik*/
+	a:active {color:red} /* link yang sedang aktif*/
+</style>
+</head>
+
+selektor beperti a:link, a:visited, dll dinamakan selektor pseudocode. a:link menyatakan keadaan lik pada tag <a>
+dan link sendiri pada posisi tersebut diamakan sebuah pseudo--kelas

@@ -1,0 +1,3 @@
+/*membuat hangin text dengan cara memadukan text-indent dan padding left*/
+text-indent:-30px;
+padding-left: 30px;

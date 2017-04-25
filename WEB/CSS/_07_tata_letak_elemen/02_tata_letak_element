@@ -1,0 +1,48 @@
+Element dikategorikan menjadi 2
+1. element blok
+   element blok adalah elem yang memakan semua tempat yang ada disamping kanan pada ortunya. 
+   contoh h1, h2, p, div, li
+2. element inline
+   element inline adalah element yang memungkinkan tempat tersisa diseblah kanan pada orangtuanya 
+   dipakai element yang lain bila memang mencukupi contoh: a, img, span
+   
+
+float		: left; /*mengambang di kiri dan di sebelah kanannya bisa diisi oleh elemen lain*/
+clear		: left/right/both; /*tidak terdapat elemen lain di sebelah kiri */
+position	: static/absolute/relative/fixed */menempatkan elemen di posisi tertentu, bisa membuat antar element saling bertindihan8?
+display		: inline/blok/table /*mengubah element inline menjadi element blok and vice-versa*/
+
+
+static		: normal
+absolute	: akan sesuai dengan pengaturan left, top, right, bottom (start position  dari body awal html)
+relavite	: mirip dengan absolute akan menyesuiakan pengaturan left, top, right, bottom tp start positionnya dari kondisi normal dimana elemnt itu berada
+fixed		: mirip dengan absolute, tp kalau discroll posisinya akan tetap(mengikuti scrlan)
+
+
+DISPLAY
+=======
+
+POSITION
+========
+ex:
+.divKhusus {
+	position	: absolute ;
+	left 		: 40px ;
+	top			:75px ;
+}
+
+
+/*trik gambar dengan teks dikanan dan pemisah*/
+========================================+
+.gambar {float:left;}
+.pemisah {clear:both}
+========================================+
+
+/*MENAMPILKAN ELEMENT DITENGAH*/
+misal kita ingin menampilkan tabel di tengah layar
+========================================================
+table {
+	margin-left		: auto	
+	margin-right	: auto
+}
+========================================================

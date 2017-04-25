@@ -1,0 +1,6 @@
+background-image: url(asd.jpg);
+background-repeat: no-repeat/repeat-x/repeat-y;
+background-position: center/top left/top center/top right/center left/center center/center right/bottom left ...
+background-attachment: fixed; (background tetap pada posisinya walau halaman di scroll)
+height: 20px;
+padding-right:0px; /*tinggi gambar*/

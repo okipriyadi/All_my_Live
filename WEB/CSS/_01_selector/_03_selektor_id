@@ -1,0 +1,24 @@
+</html>
+<head>
+<title></title>
+<style type="text/css">
+	.merah {background-color:red;
+			color:green;
+			}
+	.biru {background-color:blue;
+			color:green;
+			}
+	.khusus {color: yellow;}
+	.bagian1 {text-align:right;
+			color:white;
+			}
+</style>
+</head>
+<body>
+	<div id="bagian1" class="merah"></div>
+	<div class="merah khusus"></div>
+	<div class="biru"></div>
+	<div class="merah"></div>
+	<div class="biru"></div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<head>
+<title></title>
+<style type="text/css">
+	a:link {color:blue;}
+	a:hover {background-color:blue;
+			 color:white;
+			}
+	a:visited {color:green}
+	a:active {color:red}
+</style>
+</head>

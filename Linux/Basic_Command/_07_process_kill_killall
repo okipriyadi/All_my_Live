@@ -1,0 +1,4 @@
+kill all [nama program]
+kill pkill -u [namauser] 	: kill seluruh proses yang berjalan dengan user  tertentu
+man 7 signal 				: melihat perintah kill 
+kill [nomorsignal] [namaprogram] : mengkill sesuai signal & namaprogram

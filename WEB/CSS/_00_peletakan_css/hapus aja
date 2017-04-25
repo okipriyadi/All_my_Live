@@ -1,0 +1,104 @@
+<!--
+Embedded JavaScript is JavaScript that is inside an HTML document, but contained within a
+<script> element and executed only on that page.
+-->
+
+<!doctype html>
+<html>
+    <head>
+        <title>Great Home Page in HTML5</title>
+        <meta charset="utf-8">
+<style type="text/css">
+		* {
+  box-model: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+#wrapper {
+  width: 450px;
+}
+.container {
+  display: inline-block;
+  width: 200px;
+  padding: 10px;
+}
+h2 {
+  margin: 5px 0;
+  color: #666;
+}
+table {
+  width: 200px;
+  border-collapse: collapse;
+}
+td {
+  color: #333;
+  padding: 10px;
+  border: 1px solid #bbb;
+  position: relative;
+}
+td button {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+  font-size: 12px;
+}
+td button:hover {
+  outline: none;
+  border-color: #888;
+  cursor: pointer;
+}
+	</style>
+    </head>
+<body>
+    Hai
+    <!-- di HTML 5 DIV untuk header diganti dengan element HEADER -->
+   <div id="wrapper"></div>
+</body>
+</html>
+
+<script>
+window.onload = function () {
+	  var data = {
+		    	like: ['vanilla', 'pistachio', 'squirrels', 'squash', 'mountains'],
+    			dislike: ['chocolate', 'trucks', 'football', 'hard candy', 'valleys']
+  		};
+	  var tables = {};
+	  var moveMe = function () {
+	    this.table = tables[this.table === tables.like ? 'dislike' : 'like'];
+	    this.table.tbody.appendChild(this.tr);
+	  };
+	  
+	  Object.keys(data).forEach(function (key) {
+    		var container = document.createElement('div'), 
+  				table = tables[key] = document.createElement('table'),
+		        tbody = table.tbody = document.createElement('tbody'); 
+			data[key].forEach(function (item) {
+      			var tr = document.createElement('tr'), 
+			    	td = document.createElement('td');
+				td.innerHTML = item;
+      			tr.appendChild(td);
+      			tbody.appendChild(tr);
+      			var button = document.createElement('button');
+      			button.innerHTML = 'move';
+      			button.onclick = moveMe;
+      			button.table = table;
+      			button.tr = tr;
+      			td.appendChild(button);
+    		});
+    
+			table.appendChild(tbody);
+    		var header = document.createElement('h2');
+    		header.innerHTML = key;
+
+    		container.appendChild(header);
+    		container.appendChild(table);
+    		container.className = 'container';
+    		document.getElementById('wrapper').appendChild(container);
+  	});
+};
+
+</script>

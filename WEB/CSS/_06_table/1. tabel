@@ -1,0 +1,24 @@
+border: solid 1px green;
+background-color: red;
+color : navy;
+text-align: center;
+vertical-align: top;
+width : 20px;
+padding : 2px;
+colspan:2;
+font-size:2 em;
+background-image: url(asd.jpg);
+width: 90%;
+
+
+
+
+
+/*
+ada border-collaps: collaps/seperate (embuat tepis sel bisa menyatu)
+===================================================================+
+cara membuat tabel berada di tengah layar (bua marginnya jadi auto):
+margin-left : auto;
+margin-right : auto;
+===================================================================+
+*/

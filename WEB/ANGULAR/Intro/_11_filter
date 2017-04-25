@@ -1,0 +1,58 @@
+currency 		: Format a number to a currency format.
+date 			: Format a date to a specified format.
+filter 			: Select a subset of items from an array.
+json 			: Format an object to a JSON string.
+limitTo 		: Limits an array/string, into a specified number of elements/characters.
+lowercase		: Format a string to lower case.
+number			: Format a number to a string.
+orderBy			: Orders an array by an expression.
+uppercase 		: Format a string to upper case.
+
+ex:
+<div ng-app="myApp" ng-controller="personCtrl">
+<p>The name is {{ lastName | uppercase }}</p>
+</div>
+
+ex2 :
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="namesCtrl">
+
+<ul>
+  <li ng-repeat="x in names | filter : 'i'">
+    {{ x }}
+  </li>
+</ul>
+
+</div>
+
+<script>
+angular.module('myApp', []).controller('namesCtrl', function($scope) {
+    $scope.names = [
+        'Jani',
+        'Carl',
+        'Margareth',
+        'Hege',
+        'Joe',
+        'Gustav',
+        'Birgit',
+        'Mary',
+        'Kai'
+    ];
+});
+</script>
+
+<p>This example displays only the names containing the letter "i".</p>
+
+</body>
+</html>
+
+output:
+. Jani
+. Birgit
+. Kai
+
+
+

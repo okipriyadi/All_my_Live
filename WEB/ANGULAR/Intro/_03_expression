@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<script src="../angular.min.js"></script>
+<body>
+
+<div ng-app="" ng-init="myCol='lightblue'">
+  <p>My first expression: {{ 5 + 5 }}</p>
+  <input style="background-color:{{myCol}}" ng-model="myCol" value="{{myCol}}">
+</div>
+
+</body>
+</html>
+
+<!--
+AngularJS expressions can be written
+{{ expression }}
+atau
+ng-bind="expression"
+-->

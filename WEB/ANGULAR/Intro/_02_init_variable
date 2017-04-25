@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="../angular.min.js"></script>
+<body>
+
+<div ng-app="" ng-init="firstName='rai'">
+	<p>The name is <span ng-bind="firstName"></span></p>
+	<p>cara lain {{firstName}}</p>
+</div>
+
+</body>
+</html>
+
+<!-- 
+	ng-init		:initializes AngularJS application variables.
+	
+	You can use "data-ng-", instead of "ng-", if you want to make your page HTML valid.
+	
+ -->

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="../angular.min.js"></script>
+<body>
+
+<div ng-app="">
+  <p>Name : <input type="text" ng-model="name"></p>
+  <h1>Hello {{name}}</h1>
+  
+  
+  <p>Address : <input type="text" ng-model="address">
+  <h2 ng-bind="address"></h2>
+</div>
+
+</body>
+</html>
+
+<!-- 
+	ng-app 		: directive defines an AngularJS application.
+	ng-model 	: directive binds the value of HTML controls (input, select, textarea) to application data.
+	ng-bind directive binds application data to the HTML view.
+ -->

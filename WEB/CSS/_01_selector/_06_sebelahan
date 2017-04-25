@@ -1,0 +1,19 @@
+</html>
+<head>
+<title></title>
+<style type="text/css">
+	h1 + h2{
+	
+	}
+	<!-- h1 + h2 diartikan sebagai selektor bersebelahan yang akan mengatur h2 yg terletak TEPAT setelah H1  -->
+</style>
+</head>
+<body>
+	<p>ini paragraf anak</p>
+	<div>
+		<p>
+			ini paragraf cucu
+		</p>
+	</div>
+</body>
+</html>

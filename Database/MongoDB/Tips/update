@@ -1,0 +1,3 @@
+db.[collection name].update({[query], {$set:{"nama field": "new value"} }})
+ex:
+ db.user.update({}, {$set: {"password" : "$2a$10$7RPVcoQ02TMCLjKct2k2OOPdM.JKKpBvjqptiYQIcDgUISNHFMek6"}})
