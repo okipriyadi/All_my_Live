@@ -3,15 +3,15 @@ Now we’ll write a simple view function that fetches all our blog posts from th
 and displays them using our template. Open up the appsaya/views.py file and type the
 following:
 ======================================================
-from django.template import loader, Context
-from django.http import HttpResponse
-from mysite.blog.models import BlogPost
-
-def archive(request):
-    posts = BlogPost.objects.all()
-    t = loader.get_template("archive.html")
-    c = Context({ 'posts': posts })
-    return HttpResponse(t.render(c))
+    from django.template import loader, Context
+    from django.http import HttpResponse
+    from mysite.blog.models import BlogPost
+    
+    def archive(request):
+        posts = BlogPost.objects.all()
+        t = loader.get_template("archive.html")
+        c = Context({ 'posts': posts })
+        return HttpResponse(t.render(c))
 ======================================================
 
 Skipping over the import lines for the moment (they just load up the function and

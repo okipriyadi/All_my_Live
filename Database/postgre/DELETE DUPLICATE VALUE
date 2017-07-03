@@ -1,0 +1,14 @@
+
+down vote
+Some of these approaches seem a little complicated, and I generally do this as:
+
+Given table table, want to unique it on (field1, field2) keeping the row with the max field3:
+
+DELETE FROM table USING table alias 
+  WHERE table.field1 = alias.field1 AND table.field2 = alias.field2 AND
+    table.max_field < alias.max_field
+For example, I have a table, user_accounts, and I want to add a unique constraint on email, but I have some duplicates. Say also that I want to keep the most recently created one (max id among duplicates).
+
+DELETE FROM user_accounts USING user_accounts ua2
+  WHERE user_accounts.email = ua2.email AND user_account.id < ua2.id;
+Note - USING is not standard SQL, it is a PostgreSQL extension (but a very useful one), but the original question specifically mentions PostgreSQL.
