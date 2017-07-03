@@ -1,0 +1,21 @@
+python manage.py showmigrations #show migrations
+
+Resetting Django migrations in development phase
+So you are still developing the application ,you app is not on production yet .In this case deleting the whole database is not a big deal.You can reset the migrations in exactly three steps
+
+1)
+
+Start by droping your database using SQL language if you are using a database system like Posgres or MySQL and you have a database with name mydb
+
+delete mydb;
+If you are using sqlite you just need to delete sqlite file which's generally named db.sqlite3
+
+2)
+
+Next you need to go through all migrations folders for each app that belongs to your project and delete the migrations files except for init.py
+
+If you are using a terminal under Linux/MAC you can automate this tedious easilly .For example
+
+find . -path "*/migrations/*.py" -not -name "__init__.py" -delete
+find . -path "*/migrations/*.pyc"  -delete
+
