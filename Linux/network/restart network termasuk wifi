@@ -1,0 +1,12 @@
+#Untuk restart hrdware
+sudo service network-manager restart
+
+
+
+
+
+
+#Untuk restart IP
+sudo service networking restart
+atau
+systemctl restart networking

@@ -1,0 +1,10 @@
+1. Pertama Install Adobe Air terlebih dahulu .
+2. Buka terminal, kopas command berikut :
+		wget -O adobe-air.sh http://drive.noobslab.com/data/apps/AdobeAir/adobe-air.sh
+3. Kemudian copas perintah berikut
+		chmod +x adobe-air.sh;sudo ./adobe-air.sh
+4. Setelah instalasi Adobe Air berhasil kemudian download Aplikasi Ayat nya dari web KSU langsung, silahkan masuk ke
+		http://quran.ksu.edu.sa/ayat/?l=en
+		dan pilih yang Ubuntu,
+5. Selanjutnya Ekstrak Hasil download tadi, akan ada beberapa file, diantaranya Ayat-v1.4.air. 
+6. Klik kanan file tersebut dan pilih Open With Adobe Air. 

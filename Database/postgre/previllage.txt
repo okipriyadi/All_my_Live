@@ -65,6 +65,12 @@ Next, let's grants all privileges on a table COMPANY to the user "manisha" as fo
 testdb=# GRANT ALL ON COMPANY TO manisha;
 hasilnya:
 GRANT
+
+
+kalau pingin grant semua table
+GRANT ALL ON ALL TABLES IN SCHEMA public  TO sysumi;
+
+
 ======================================================+
 The message GRANT indicates that all privileges are assigned to the USER.
 Next, let's revoke the privileges from the USER "manisha" as follows:

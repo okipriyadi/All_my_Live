@@ -1,16 +1,18 @@
+Pakai C "for" style:
+====================== 
 for	i := 0;	i <	5;	i++	{
 	fmt.Println("Angka",	i)
 }
 
-atau
-=====
+atau pakai C "while" style
+==========================
 
 for	i <	5	{
 	fmt.Println("Angka",	i)
 	i++
 }
 
-for	 	Tanpa	Argumen
+for Tanpa Argumen (infinite loop)
 =========================
 
 for	{
@@ -25,6 +27,11 @@ Penggunaan	Keyword	 	for	 	-	 	range
 ============================================
 Cara	ke-4	adalah	perulangan	dengan	menggunakan	kombinasi	keyword	 	for	 	dan	 	range	 .
 Cara	ini	biasa	digunakan	untuk	me-looping	data	bertipe	array.	
+
+for _, v := range namaarray {
+	lakukan sesuatu
+} 
+
 
 
 Penggunaan	Keyword	 	break	 	&	 	continue	

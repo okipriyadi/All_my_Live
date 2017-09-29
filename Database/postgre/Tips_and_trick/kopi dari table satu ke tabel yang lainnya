@@ -1,0 +1,6 @@
+insert into 
+	app_data_kelurahan (id, geom, kelurahan, kode_kelurahan,kode_kecamatan) 
+select 
+	id, geom, kelurahan, kode_kelurahan,kode_kecamatan 
+from 
+	data_kelurahan ;

@@ -1,0 +1,2 @@
+create sequence kelurahan_id_seq;
+create table data_kecamatan(id int default nextval('kelurahan_id_seq'),geom geometry(multiPolygon, 4326),kecamatan varchar (40), kabupaten varchar(40), kode_kec integer, kode_kab  integer) ;

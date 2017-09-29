@@ -28,7 +28,11 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO iniuser;
 
 -- repeat code below for each database:
 
+
 GRANT CONNECT ON DATABASE foo to iniuser;
+GRANT ALL PRIVILEGES ON TABLE side_adzone TO jerry;
+or to all table
+GRANT CONNECT ON DATABASE database_name  TO user_name;
 \c foo
 GRANT USAGE ON SCHEMA public to iniuser; 
 GRANT SELECT ON ALL SEQUENCES IN SCHEMA public TO iniuser;

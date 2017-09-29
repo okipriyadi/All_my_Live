@@ -1,0 +1,9 @@
+x, _ := ioutil.ReadAll(c.Request.Body)
+fmt.Printf("req ----> %s", x)
+
+
+
+//mengembalikan agar bisa dikirim via io
+b := bytes.NewBuffer(x)
+resp, _ := http.Post(full_path, "application/json", c.Request.Body)
+	

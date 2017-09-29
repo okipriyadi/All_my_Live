@@ -1,0 +1,8 @@
+1. Download dari https://nodejs.org/en/
+2. hasil downloadan biasanya berbentuk nodexxx.tar.xz
+3. extract file downloadan
+4. rename menjadi "node" (tanpa version) agar memudahkan
+5. pada parent folder node ketikan perintah "sudo cp -r node/{bin,include,lib,share} /usr/" 
+6. check apakah node & npm sudah terinstall :
+   $ node -v
+   $ npm -v

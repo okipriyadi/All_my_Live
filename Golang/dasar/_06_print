@@ -2,12 +2,25 @@ fmt.Printf("halo	john	wick!\n")
 fmt.Printf("halo	%s	%s!\n",	firstName,	lastName)
 fmt.Println("halo",	firstName,	lastName	+	"!")
 
-
+firstname := "Dj"
+nilai := 10
+fmt.Printf("halo	%v	%v!\n",	firstName,	nilai)
+fmt.Printf("halo	%T	%T!\n",	firstName,	nilai)
 
 
 /*
-Fungsi	 	fmt.Printf()	 	tidak	menghasilkan	baris	baru	di	akhir	text,	oleh	karena	itu
-digunakanlah	literal	 	\n	 	untuk	memunculkan	baris	baru	di	akhir.	Hal	ini	sangat	berbeda	jika
-dibandingkan	dengan	fungsi	 	fmt.Println()	 	yang	secara	otomatis	menghasilkan	end	line
-(baris	baru)	di	akhir.
+%v menampilkan varibel berdasarkan typenya masing- masing
+%T menampilkan type variabelnya
 */
+
+/*
+Fungsi	 	fmt.Printf()	 	tidak	menghasilkan	baris	baru	di	akhir	text,	oleh	
+karena	itu digunakanlah	literal	 	\n	 	untuk	memunculkan	baris	baru	di	akhir.	
+Hal	ini	sangat	berbeda	jika dibandingkan	dengan	fungsi	 fmt.Println() yang	secara	otomatis
+menghasilkan	end	line (baris	baru)	di	akhir.
+*/
+
+
+SPRINT => menggabungkan (join) argumen-argumen menjadi satu buah string
+================
+a = fmt.Sprint("hello", "world") // hasilnya jadi "hello world"

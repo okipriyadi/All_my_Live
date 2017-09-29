@@ -1,0 +1,2 @@
+LAST_VALUE=`echo "SELECT last_value FROM my_seq;" | psql -qAt -d database_name`
+echo $LAST_VALUE

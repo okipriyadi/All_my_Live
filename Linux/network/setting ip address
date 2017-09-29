@@ -1,0 +1,26 @@
+==========================================+
+dinamis (direstart maka settingan hilang)
+==========================================+
+sudo ifconfig [nama ethernet] [ip yg diinginkan] netmask [netmask yg diinginkan]
+ex: sudo ifconfig eth0 10.0.0.100 netmask 255.255.255.0
+
+untuk verifikasi bisa dilihat dengan: 
+ifconfig eth0
+==========================================+
+statik (tetep ada walau di restart) 
+==========================================+
+
+1. edit file : /etc/network/interfaces
+
+tambahkan 
+
+auto [nama ethernet] 
+iface [nama ehernet] inet static
+address 10.10.10.1
+network 255.255.255.0
+
+
+
+
+
+
