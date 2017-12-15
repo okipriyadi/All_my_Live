@@ -1,0 +1,20 @@
+Sebelumnya sesuaikan path library yang dibutuhkan untuk Adobe Air ini agar instalasi berjalan mulus tanpa error, buat symlink  untuk gnome keyring melalui terminal :
+
+sudo ln -s /usr/lib/i386-linux-gnu/libgnome-keyring.so.0 /usr/lib/libgnome-keyring.so.0
+ sudo ln -s /usr/lib/i386-linux-gnu/libgnome-keyring.so.0.2.0 /usr/lib/libgnome-keyring.so.0.2.0
+ 
+ Untuk Ubuntu atau Linux berbasis Debian lainnya tinggal klik 2x file Adobe Air 32bit.deb untuk sistem 32bit atau file Adobe Air 64bit.deb untuk sistem 64bit.
+ Apabila memilih instalasi dari file Binary silahkan masuk ke terminal kemudian ketikkan perintah berikut :
+sudo chmod +x adobe-air.bin
+sudo ./adobe-air.bin
+
+
+Apabila memilih instalasi dari file Binary silahkan masuk ke terminal kemudian ketikkan perintah berikut :
+sudo chmod +x adobe-air.bin
+sudo ./adobe-air.bin
+
+
+JIKA SUARA TIDAK MUNCL SOLUSINYA
+sudo dpkg --add-architecture i386
+sudo apt-get update
+Sudo apt-get install glib-networking:i386 gstreamer0.10-plugins-base:i386 gstreamer0.10-plugins-good:i386 gstreamer0.10-x:i386 gstreamer1.0-plugins-base:i386 gtk2-engines:i386 gtk2-engines-oxygen:i386 gtk2-engines-pixbuf:i386 ibus-gtk:i386 libaa1:i386 libaio1:i386 libao4:i386 libasn1-8-heimdal:i386 libaudio2:i386 libaudiofile1:i386 libavc1394-0:i386 libcaca0:i386 libcairo-gobject2:i386 libcapi20-3:i386 libcdparanoia0:i386 libcupsfilters1:i386 libcupsimage2:i386 libcurl3:i386 libdbus-glib-1-2:i386 libdv4:i386 libesd0:i386 libexif12:i386 libfluidsynth1:i386 libgail-common:i386 libgail18:i386 libgconf-2-4:i386 libgd3:i386 libgdbm3:i386 libgettextpo0:i386 libgphoto2-6:i386 libgphoto2-port12:i386 libgssapi3-heimdal:i386 libgstreamer-plugins-base0.10-0:i386 libgstreamer-plugins-base1.0-0:i386 libgstreamer0.10-0:i386 libgstreamer1.0-0:i386 libgudev-1.0-0:i386 libhcrypto4-heimdal:i386 libheimbase1-heimdal:i386 libheimntlm0-heimdal:i386 libhx509-5-heimdal:i386 libibus-1.0-5:i386 libiec61883-0:i386 libieee1284-3:i386 libkrb5-26-heimdal:i386 libldap-2.4-2:i386 libmad0:i386 libmikmod3:i386 libmng2:i386 libmpg123-0:i386 libmysqlclient20:i386 libodbc1:i386 libopenal1:i386 libopus0:i386 liborc-0.4-0:i386 libproxy1v5:i386 libpulse-mainloop-glib0:i386 libpulsedsp:i386 libqt4-dbus:i386 libqt4-declarative:i386 libqt4-designer:i386 libqt4-network:i386 libqt4-opengl:i386 libqt4-qt3support:i386 libqt4-script:i386 libqt4-scripttools:i386 libqt4-sql:i386 libqt4-sql-mysql:i386 libqt4-svg:i386 libqt4-test:i386 libqt4-xml:i386 libqt4-xmlpatterns:i386 libqtcore4:i386 libqtdbus4:i386 libqtgui4:i386 libqtwebkit4:i386 libraw1394-11:i386 libreadline6:i386 libroken18-heimdal:i386 librtmp1:i386 libsane:i386 libsasl2-2:i386 libsasl2-modules:i386 libsasl2-modules-db:i386 libsdl-image1.2:i386 libsdl-mixer1.2:i386 libsdl-net1.2:i386 libsdl-ttf2.0-0:i386 libsdl1.2debian:i386 libshout3:i386 libslang2:i386 libsoup-gnome2.4-1:i386 libsoup2.4-1:i386 libspeex1:i386 libssl1.0.0:i386 libstdc++5:i386 libtag1v5-vanilla:i386 libtheora0:i386 libunistring0:i386 libusb-1.0-0:i386 libv4l-0:i386 libv4lconvert0:i386 libvisual-0.4-0:i386 libvpx3:i386 libwavpack1:i386 libwebp5:i386 libwind0-heimdal:i386 libxaw7:i386 libxmu6:i386 libxpm4:i386 libxss1:i386 libxtst6:i386 libxv1:i386 mysql-common odbcinst odbcinst1debian2 odbcinst1debian2:i386 qt-at-spi:i386 xaw3dg:i386

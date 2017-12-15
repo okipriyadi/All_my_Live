@@ -1,0 +1,5 @@
+create table table_baru (  like table_lama
+    including defaults
+    including constraints
+    including indexes
+);

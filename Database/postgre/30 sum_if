@@ -1,0 +1,1 @@
+SUM(CASE WHEN  ap.penyalur = 'apapun' then 1 else 0 end) AS nama_alias

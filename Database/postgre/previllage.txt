@@ -62,13 +62,8 @@ id | name | age | address| salary
 
 Next, let's grants all privileges on a table COMPANY to the user "manisha" as follows:
 ======================================================+
-testdb=# GRANT ALL ON COMPANY TO manisha;
-hasilnya:
-GRANT
-
-
 kalau pingin grant semua table
-GRANT ALL ON ALL TABLES IN SCHEMA public  TO sysumi;
+GRANT ALL PRIVILEGES ON DATABASE jerry to tom;
 
 
 ======================================================+
