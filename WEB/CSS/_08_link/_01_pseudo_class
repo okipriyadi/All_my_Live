@@ -1,12 +1,23 @@
 <head>
 <title></title>
 <style type="text/css">
-	a:link {color:blue;}/* link yg belum pernah di klik*/
-	a:hover {background-color:blue;
-			 color:white;
-			}/* berubah saat mouse berada diatasnya */
-	a:visited {color:green} /*link yang pernah diklik*/
-	a:active {color:red} /* link yang sedang aktif*/
+/* link yg belum pernah di klik*/
+	a:link {
+		color:blue;
+	}
+/* berubah saat mouse berada diatasnya */
+	a:hover {
+		background-color:blue;
+		color:white;
+	}
+/*link yang pernah diklik*/
+	a:visited {
+		color:green
+	}
+	/* link yang sedang aktif*/
+	a:active {
+		color:red
+	}
 </style>
 </head>
 

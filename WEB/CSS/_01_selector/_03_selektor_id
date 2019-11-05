@@ -2,14 +2,7 @@
 <head>
 <title></title>
 <style type="text/css">
-	.merah {background-color:red;
-			color:green;
-			}
-	.biru {background-color:blue;
-			color:green;
-			}
-	.khusus {color: yellow;}
-	.bagian1 {text-align:right;
+	#bagian1 {text-align:right;
 			color:white;
 			}
 </style>

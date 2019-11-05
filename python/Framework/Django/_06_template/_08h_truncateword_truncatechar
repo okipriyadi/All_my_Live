@@ -1,5 +1,0 @@
-truncatewords
-{{ value|truncatewords:3 }}
-
-
-{{ value|truncatechars:9 }}

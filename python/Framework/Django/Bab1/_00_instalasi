@@ -1,6 +1,0 @@
-kunjungi : https://www.djangoproject.com/download/
-
-install:
-==========================================
-	pip install Django==1.9.5
-==========================================

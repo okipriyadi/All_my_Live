@@ -3,9 +3,12 @@ font-size: 12px;
 
 /*
 Satuan font
-pt = 
-pc
-px = pixcel
-em = relatif terhadap ukuran font yang sekarang
-
+pt = point atau titik. 1pt = 1/72 inci
+pc = pica 1 pc = 12 titik
+px = pixel, 1 px = 1 titik pada layar komputer
+em = relatif terhadap ukuran font yang sekarang. 1 em identik dengan ukuran font sekarang. 22 em berarti 2 kali ukuran font sekarang
+% = relatif terhadap ukuran font sekarang.
+in = inchi
+mm = milieter
+cm = centimeter
 */

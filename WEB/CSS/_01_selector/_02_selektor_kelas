@@ -2,12 +2,8 @@
 <head>
 <title></title>
 <style type="text/css">
-	.merah {background-color:red;
-			color:green;
-			}
-	.biru {background-color:blue;
-			color:green;
-			}
+	.merah {background-color:red; color:green;}
+	.biru {background-color:blue; color:green;}
 	.khusus {color: yellow;}
 </style>
 </head>

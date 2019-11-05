@@ -1,0 +1,9 @@
+text-transform: capitalize;
+
+/*
+option:
+capitalize : membuat huruf besar pada tiap huruf awal setiap kata
+lowercase : membuat semua huruf kecil
+uppercase : membuat setiap huruf besar
+none  : teks apa adanya tanpa dikonversi
+*/

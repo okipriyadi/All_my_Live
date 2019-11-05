@@ -1,4 +1,0 @@
-Q : Django reverse error: NoReverseMatch
-
-
-A :  you've used a namespace when including the URLs, so you probably need to use "blog:postdetail" to reverse it.
